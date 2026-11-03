@@ -1,17 +1,252 @@
 {
   "meta": {
-    "title": "Oceanar · Estamos trabajando en el sitio",
-    "description": "Estamos construyendo el nuevo sitio de Oceanar. Muy pronto vas a poder visitarlo."
+    "siteName": "Oceanar",
+    "description": "TODO(contenido): Oceanar crea experiencias para aprender a vincularse con el mar desde la costa patagónica de Chubut, Argentina.",
+    "pages": {
+      "oceanar": {
+        "title": "Qué es oceanar",
+        "description": "TODO(contenido): El verbo, la cultura oceánica y el método de Oceanar."
+      },
+      "projects": {
+        "title": "Proyectos",
+        "description": "TODO(contenido): Proyectos de Oceanar para ver, escuchar y habitar el mar patagónico."
+      },
+      "listen": {
+        "title": "Escuchar",
+        "description": "TODO(contenido): Archivo sonoro del mar patagónico."
+      },
+      "work": {
+        "title": "Trabajemos en conjunto",
+        "description": "TODO(contenido): Formatos para crear con Oceanar."
+      },
+      "team": {
+        "title": "Quiénes somos",
+        "description": "TODO(contenido): El equipo y la red de Oceanar."
+      },
+      "talk": {
+        "title": "Conversemos",
+        "description": "TODO(contenido): Agendá una conversación con Oceanar."
+      }
+    }
   },
-  "construction": {
-    "badge": "En construcción",
-    "title": "Estamos trabajando en el sitio",
-    "body": "Estamos construyendo el nuevo sitio de Oceanar. Muy pronto vas a poder visitarlo.",
-    "footer": "Gracias por tu paciencia."
+  "nav": {
+    "label": "Navegación principal",
+    "home": "Inicio",
+    "oceanar": "Oceanar",
+    "projects": "Proyectos",
+    "listen": "Escuchar",
+    "work": "Trabajemos en conjunto",
+    "team": "Quiénes somos",
+    "talk": "Conversemos",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "skipToContent": "Saltar al contenido"
   },
   "languageSwitcher": {
     "label": "Idioma",
     "es": "Español",
     "en": "English"
+  },
+  "footer": {
+    "place": "Costa patagónica · Chubut, Argentina",
+    "navLabel": "Navegación del pie de página"
+  },
+  "drawing": {
+    "fish": "Dibujo a mano de un pez",
+    "crab": "Dibujo a mano de un cangrejo",
+    "kelp": "Dibujo a mano de un alga"
+  },
+  "verb": {
+    "title": "El verbo",
+    "word": "oceanar",
+    "grammar": "verbo",
+    "etymology": "Del griego Ōkeanós, «río que rodea la tierra», y del latín sanare, «curar, devolver al estado sano», con el sufijo -ar.",
+    "senses": [
+      "Acto de ser y hacerse océano.",
+      "Sanar desde lo profundo.",
+      "Fluir como identidad.",
+      "Moverse al ritmo del misterio; habitar el mar como identidad y como acción."
+    ]
+  },
+  "culture": {
+    "title": "Cultura oceánica",
+    "body": "Una forma de estar en el mundo, una identidad que nace del vínculo profundo con el mar. Es el conjunto de valores, prácticas y comunidades que reconocen al océano como un ser vivo y como un maestro.",
+    "conditionsLead": "Una persona o comunidad vive la cultura oceánica cuando:",
+    "conditions": [
+      {
+        "drawing": "fish",
+        "text": "siente al océano como un ser vivo y no como un escenario;"
+      },
+      {
+        "drawing": "crab",
+        "text": "deja que el mar le enseñe algo sobre cómo vivir;"
+      },
+      {
+        "drawing": "kelp",
+        "text": "actúa desde ese vínculo: cuidando, creando, conectando. TODO(contenido): ¿conectando o compartiendo?"
+      }
+    ]
+  },
+  "method": {
+    "title": "Hacer como el mar",
+    "lead": "No proponemos accionar en el mar ni para el mar. Proponemos accionar con el mar, como el mar.",
+    "note": "TODO(contenido): nombre definitivo del método y textos finales.",
+    "behaviors": [
+      {
+        "name": "Mareas",
+        "text": "TODO(contenido): Ritmo, ciclos, respetar los tiempos largos y los cambios."
+      },
+      {
+        "name": "Corrientes",
+        "text": "TODO(contenido): Conectar lo lejano, hacer circular, tejer redes entre personas y lugares."
+      },
+      {
+        "name": "Bosque de cachiyuyo",
+        "text": "TODO(contenido): Sostener, dar refugio, crecer en comunidad, ser flexible ante el oleaje."
+      },
+      {
+        "name": "Profundidad",
+        "text": "TODO(contenido): Bajar de a poco, adaptarse a la presión y al frío, escuchar en silencio."
+      }
+    ]
+  },
+  "formats": {
+    "title": "Trabajemos en conjunto",
+    "items": [
+      {
+        "name": "Diseño de experiencias sonoras",
+        "text": "TODO(contenido): descripción del formato."
+      },
+      {
+        "name": "Residencias a medida",
+        "text": "TODO(contenido): descripción del formato."
+      },
+      {
+        "name": "Charlas, talleres y capacitaciones",
+        "text": "TODO(contenido): descripción del formato."
+      },
+      {
+        "name": "Asesorías y consultorías",
+        "text": "TODO(contenido): descripción del formato."
+      },
+      {
+        "name": "Material audiovisual subacuático",
+        "text": "TODO(contenido): venta o licencia; descripción del formato."
+      }
+    ]
+  },
+  "notTaken": {
+    "title": "Lo que no tomamos",
+    "lead": "TODO(contenido): Elegimos con cuidado cómo y con quién nos metemos al agua. Por eso no tomamos:",
+    "items": [
+      "lavado de imagen verde;",
+      "fauna o mar como espectáculo;",
+      "pedidos de contenido del mar sin vínculo con el territorio ni con quienes lo habitan;",
+      "encargos llave en mano sin co-creación."
+    ]
+  },
+  "categories": {
+    "title": "Tres formas de vincularse con el mar",
+    "items": [
+      {
+        "id": "see",
+        "name": "VER",
+        "text": "TODO(contenido): Proyectos de desarrollo audiovisual: experiencias en domo 360°, video subacuático, realidad virtual, cine y libros."
+      },
+      {
+        "id": "listen",
+        "name": "ESCUCHAR",
+        "text": "TODO(contenido): La sala sonora, el diseño de experiencias sonoras, el registro del paisaje sonoro subacuático y los talleres de escucha."
+      },
+      {
+        "id": "inhabit",
+        "name": "HABITAR",
+        "text": "TODO(contenido): Experiencias que implican poner el cuerpo en el territorio: residencias y talleres en el mar."
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "question": "¿Qué es oceanar?",
+      "scrollHint": "Bajá para descubrirlo"
+    },
+    "intro": {
+      "body": "TODO(contenido): Creamos experiencias para aprender a vincularse con el mar, vivas donde vivas. Desde la costa patagónica de Chubut diseñamos actividades que estimulan capacidades acuáticas: físicas y científicas, pero también espirituales, relacionales y vinculares.",
+      "cta": "Conocé cómo trabajamos"
+    },
+    "flagship": {
+      "eyebrow": "Proyecto insignia",
+      "title": "El Avistaje Sonoro",
+      "body": "TODO(contenido): bajada del proyecto insignia y de la sala sonora.",
+      "cta": "Escuchar"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "body": "TODO(contenido): selección de 3 o 4 proyectos.",
+      "cta": "Ver todos los proyectos"
+    },
+    "work": {
+      "cta": "Ver los formatos"
+    },
+    "allies": {
+      "title": "Red de alianzas",
+      "body": "TODO(contenido): aliados y sus logos."
+    },
+    "closing": {
+      "title": "¿Nos metemos al agua?",
+      "body": "TODO(contenido): invitación a agendar una conversación.",
+      "cta": "Agendar una conversación"
+    }
+  },
+  "oceanarPage": {
+    "title": "Qué es oceanar",
+    "positioning": {
+      "title": "Entre la empresa de impacto y la asociación civil",
+      "body": "TODO(contenido): Oceanar no es una ONG de conservación. Está en el medio entre una empresa que nace para generar impacto positivo y una asociación civil que propone otros modos de organizarse para diseñar futuros alineados al buen vivir."
+    }
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "lead": "TODO(contenido): introducción al portfolio.",
+    "filtersNote": "Los filtros por categoría, práctica y tipo de alianza llegan en la etapa 3.",
+    "listTitle": "Índice de proyectos",
+    "list": [
+      "El Avistaje Sonoro",
+      "Habitar las Algas",
+      "TODO(contenido): más proyectos"
+    ]
+  },
+  "listenPage": {
+    "title": "Escuchar",
+    "lead": "TODO(contenido): introducción al archivo sonoro.",
+    "note": "El archivo sonoro y el control de sonido llegan en la etapa 4."
+  },
+  "workPage": {
+    "title": "Trabajemos en conjunto",
+    "lead": "TODO(contenido): introducción a los formatos.",
+    "cta": "Conversemos"
+  },
+  "teamPage": {
+    "title": "Quiénes somos",
+    "lead": "TODO(contenido): introducción al equipo.",
+    "people": [
+      {
+        "name": "Candelaria Belén Piemonte",
+        "role": "TODO(contenido): rol y presentación."
+      },
+      {
+        "name": "Gonzalo",
+        "role": "TODO(contenido): apellido, rol y presentación."
+      }
+    ],
+    "network": {
+      "title": "Red de alianzas",
+      "body": "TODO(contenido): la red como comunidad viva."
+    }
+  },
+  "talkPage": {
+    "title": "Conversemos",
+    "lead": "TODO(contenido): invitación cálida a conversar.",
+    "note": "El formulario y la agenda llegan en la etapa 5."
   }
 }

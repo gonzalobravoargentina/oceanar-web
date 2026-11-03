@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { defaultLocale, hasLocale, locales, type Locale } from "@/i18n/config";
+import { localeForSlug } from "@/i18n/routes";
 
 // Picks the best supported locale from the Accept-Language header.
 function getLocale(request: NextRequest): Locale {
@@ -30,7 +31,10 @@ export function proxy(request: NextRequest) {
   );
   if (hasLocalePrefix) return;
 
-  request.nextUrl.pathname = `/${getLocale(request)}${pathname === "/" ? "" : pathname}`;
+  // A slug that belongs to one language decides it (/proyectos → /es/proyectos).
+  const firstSegment = pathname.split("/")[1] ?? "";
+  const locale = localeForSlug(firstSegment) ?? getLocale(request);
+  request.nextUrl.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
   return NextResponse.redirect(request.nextUrl);
 }
 

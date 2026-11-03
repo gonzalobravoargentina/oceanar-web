@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
+import { routeRules } from "./src/i18n/routes";
+
+const { rewrites, redirects } = routeRules();
 
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
@@ -11,6 +13,13 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  // Localized slugs (see src/i18n/routes.ts).
+  async rewrites() {
+    return rewrites;
+  },
+  async redirects() {
+    return redirects;
   },
 };
 

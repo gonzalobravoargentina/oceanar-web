@@ -1,17 +1,252 @@
 {
   "meta": {
-    "title": "Oceanar · We are working on the site",
-    "description": "We are building the new Oceanar website. You will be able to visit it very soon."
+    "siteName": "Oceanar",
+    "description": "TODO(contenido): Oceanar creates experiences for learning to bond with the sea, from the Patagonian coast of Chubut, Argentina.",
+    "pages": {
+      "oceanar": {
+        "title": "What is oceanar",
+        "description": "TODO(contenido): The verb, ocean culture and the Oceanar method."
+      },
+      "projects": {
+        "title": "Projects",
+        "description": "TODO(contenido): Oceanar projects to see, listen to and inhabit the Patagonian sea."
+      },
+      "listen": {
+        "title": "Listen",
+        "description": "TODO(contenido): A sound archive of the Patagonian sea."
+      },
+      "work": {
+        "title": "Work with us",
+        "description": "TODO(contenido): Ways to create with Oceanar."
+      },
+      "team": {
+        "title": "Who we are",
+        "description": "TODO(contenido): The Oceanar team and network."
+      },
+      "talk": {
+        "title": "Let’s talk",
+        "description": "TODO(contenido): Book a conversation with Oceanar."
+      }
+    }
   },
-  "construction": {
-    "badge": "Under construction",
-    "title": "We are working on the site",
-    "body": "We are building the new Oceanar website. You will be able to visit it very soon.",
-    "footer": "Thank you for your patience."
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "oceanar": "Oceanar",
+    "projects": "Projects",
+    "listen": "Listen",
+    "work": "Work with us",
+    "team": "Who we are",
+    "talk": "Let’s talk",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content"
   },
   "languageSwitcher": {
     "label": "Language",
     "es": "Español",
     "en": "English"
+  },
+  "footer": {
+    "place": "Patagonian coast · Chubut, Argentina",
+    "navLabel": "Footer navigation"
+  },
+  "drawing": {
+    "fish": "Hand-drawn fish",
+    "crab": "Hand-drawn crab",
+    "kelp": "Hand-drawn kelp"
+  },
+  "verb": {
+    "title": "The verb",
+    "word": "oceanar",
+    "grammar": "verb (Spanish)",
+    "etymology": "From the Greek Ōkeanós, “the river that encircles the earth”, and the Latin sanare, “to heal, to restore to health”, with the verb ending -ar.",
+    "senses": [
+      "The act of being, and becoming, ocean.",
+      "To heal from the depths.",
+      "To flow as a way of being.",
+      "To move to the rhythm of mystery; to inhabit the sea as identity and as action."
+    ]
+  },
+  "culture": {
+    "title": "Ocean culture",
+    "body": "A way of being in the world, an identity born from a deep bond with the sea. It is the set of values, practices and communities that recognize the ocean as a living being and as a teacher.",
+    "conditionsLead": "A person or a community lives ocean culture when they:",
+    "conditions": [
+      {
+        "drawing": "fish",
+        "text": "feel the ocean as a living being, not a backdrop;"
+      },
+      {
+        "drawing": "crab",
+        "text": "let the sea teach them something about how to live;"
+      },
+      {
+        "drawing": "kelp",
+        "text": "act from that bond: caring, creating, connecting. TODO(contenido): connecting or sharing?"
+      }
+    ]
+  },
+  "method": {
+    "title": "Doing as the sea does",
+    "lead": "We don’t propose acting in the sea, or for the sea. We propose acting with the sea, as the sea.",
+    "note": "TODO(contenido): final name of the method and final texts.",
+    "behaviors": [
+      {
+        "name": "Tides",
+        "text": "TODO(contenido): Rhythm and cycles; honoring long timescales and change."
+      },
+      {
+        "name": "Currents",
+        "text": "TODO(contenido): Linking what is far apart, keeping things moving, weaving networks between people and places."
+      },
+      {
+        "name": "Kelp forest",
+        "text": "TODO(contenido): Holding, sheltering, growing in community, bending with the swell."
+      },
+      {
+        "name": "Depth",
+        "text": "TODO(contenido): Going down slowly, adapting to pressure and cold, listening in silence."
+      }
+    ]
+  },
+  "formats": {
+    "title": "Work with us",
+    "items": [
+      {
+        "name": "Sound experience design",
+        "text": "TODO(contenido): format description."
+      },
+      {
+        "name": "Tailor-made residencies",
+        "text": "TODO(contenido): format description."
+      },
+      {
+        "name": "Talks, workshops and training",
+        "text": "TODO(contenido): format description."
+      },
+      {
+        "name": "Advisory and consulting",
+        "text": "TODO(contenido): format description."
+      },
+      {
+        "name": "Underwater footage",
+        "text": "TODO(contenido): for sale or licensing; format description."
+      }
+    ]
+  },
+  "notTaken": {
+    "title": "What we don’t take on",
+    "lead": "TODO(contenido): We choose carefully how, and with whom, we get in the water. That’s why we don’t take on:",
+    "items": [
+      "greenwashing;",
+      "wildlife or the sea as a spectacle;",
+      "requests for sea content with no tie to the territory or to the people who live there;",
+      "turnkey commissions without co-creation."
+    ]
+  },
+  "categories": {
+    "title": "Three ways to bond with the sea",
+    "items": [
+      {
+        "id": "see",
+        "name": "SEE",
+        "text": "TODO(contenido): Audiovisual projects: 360° dome experiences, underwater video, virtual reality, film and books."
+      },
+      {
+        "id": "listen",
+        "name": "LISTEN",
+        "text": "TODO(contenido): The sound room, sound experience design, underwater soundscape recording and listening workshops."
+      },
+      {
+        "id": "inhabit",
+        "name": "INHABIT",
+        "text": "TODO(contenido): Experiences that put the body in the territory: residencies and workshops in the sea."
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "question": "What is oceanar?",
+      "scrollHint": "Scroll down to find out"
+    },
+    "intro": {
+      "body": "TODO(contenido): We create experiences for learning to bond with the sea, wherever you live. From the Patagonian coast of Chubut, we design activities that build aquatic capacities: physical and scientific, but also spiritual and relational.",
+      "cta": "See how we work"
+    },
+    "flagship": {
+      "eyebrow": "Flagship project",
+      "title": "El Avistaje Sonoro",
+      "body": "TODO(contenido): summary of the flagship project and the sound room.",
+      "cta": "Listen"
+    },
+    "projects": {
+      "title": "Projects",
+      "body": "TODO(contenido): a selection of 3 or 4 projects.",
+      "cta": "See all projects"
+    },
+    "work": {
+      "cta": "See the formats"
+    },
+    "allies": {
+      "title": "Our network",
+      "body": "TODO(contenido): allies and their logos."
+    },
+    "closing": {
+      "title": "Shall we get in the water?",
+      "body": "TODO(contenido): invitation to book a conversation.",
+      "cta": "Book a conversation"
+    }
+  },
+  "oceanarPage": {
+    "title": "What is oceanar",
+    "positioning": {
+      "title": "Between an impact company and a civil association",
+      "body": "TODO(contenido): Oceanar is not a conservation NGO. It sits between a company founded to create positive impact and a civil association that proposes other ways of organizing, to design futures aligned with buen vivir (living well)."
+    }
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "lead": "TODO(contenido): introduction to the portfolio.",
+    "filtersNote": "Filters by category, practice and type of ally arrive in stage 3.",
+    "listTitle": "Project index",
+    "list": [
+      "El Avistaje Sonoro",
+      "Kelp Roots",
+      "TODO(contenido): more projects"
+    ]
+  },
+  "listenPage": {
+    "title": "Listen",
+    "lead": "TODO(contenido): introduction to the sound archive.",
+    "note": "The sound archive and sound control arrive in stage 4."
+  },
+  "workPage": {
+    "title": "Work with us",
+    "lead": "TODO(contenido): introduction to the formats.",
+    "cta": "Let’s talk"
+  },
+  "teamPage": {
+    "title": "Who we are",
+    "lead": "TODO(contenido): introduction to the team.",
+    "people": [
+      {
+        "name": "Candelaria Belén Piemonte",
+        "role": "TODO(contenido): role and bio."
+      },
+      {
+        "name": "Gonzalo",
+        "role": "TODO(contenido): surname, role and bio."
+      }
+    ],
+    "network": {
+      "title": "Our network",
+      "body": "TODO(contenido): the network as a living community."
+    }
+  },
+  "talkPage": {
+    "title": "Let’s talk",
+    "lead": "TODO(contenido): a warm invitation to talk.",
+    "note": "The form and booking arrive in stage 5."
   }
 }
