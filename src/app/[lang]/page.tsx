@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
 
@@ -9,7 +10,8 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary(lang);
 
   return (
-    <main className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
+    <main className="relative isolate flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center text-white">
+      <BackgroundVideo />
       <span className="rounded-full border border-current px-4 py-1 text-sm tracking-widest uppercase opacity-70">
         {dict.construction.badge}
       </span>
