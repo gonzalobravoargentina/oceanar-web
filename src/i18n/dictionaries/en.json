@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Oceanar · We are working on the site",
+    "description": "We are building the new Oceanar website. You will be able to visit it very soon."
+  },
+  "construction": {
+    "badge": "Under construction",
+    "title": "We are working on the site",
+    "body": "We are building the new Oceanar website. You will be able to visit it very soon.",
+    "footer": "Thank you for your patience."
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "es": "Español",
+    "en": "English"
+  }
+}
