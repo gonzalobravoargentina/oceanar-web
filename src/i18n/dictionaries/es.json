@@ -177,7 +177,7 @@
     "flagship": {
       "eyebrow": "Proyecto insignia",
       "title": "El Avistaje Sonoro",
-      "body": "TODO(contenido): bajada del proyecto insignia y de la sala sonora.",
+      "body": "TODO(contenido): El diseño y desarrollo de la sala sonora en Punta Ballena y de experiencias sonoras adaptadas para ella. Nació de Sonidos del Mar, la primera experiencia, creada para el Día de la Ballena.",
       "cta": "Escuchar"
     },
     "projects": {
@@ -189,8 +189,8 @@
       "cta": "Ver los formatos"
     },
     "allies": {
-      "title": "Red de alianzas",
-      "body": "TODO(contenido): aliados y sus logos."
+      "title": "Red de sostén",
+      "body": "TODO(contenido): las personas y organizaciones que participaron y participan en los proyectos."
     },
     "closing": {
       "title": "¿Nos metemos al agua?",
@@ -212,7 +212,10 @@
     "listTitle": "Índice de proyectos",
     "list": [
       "El Avistaje Sonoro",
+      "Sonidos del Mar",
       "Habitar las Algas",
+      "Anawa",
+      "Danza al Mar",
       "TODO(contenido): más proyectos"
     ]
   },
@@ -235,13 +238,17 @@
         "role": "TODO(contenido): rol y presentación."
       },
       {
-        "name": "Gonzalo",
-        "role": "TODO(contenido): apellido, rol y presentación."
+        "name": "Gonzalo Bravo",
+        "role": "TODO(contenido): rol y presentación."
+      },
+      {
+        "name": "Natalia Aga Milovic",
+        "role": "TODO(contenido): rol y presentación."
       }
     ],
     "network": {
-      "title": "Red de alianzas",
-      "body": "TODO(contenido): la red como comunidad viva."
+      "title": "Red de sostén",
+      "body": "TODO(contenido): Oceanar no existe sin su red de sostén: todas las personas que participaron y participan en sus proyectos."
     }
   },
   "talkPage": {

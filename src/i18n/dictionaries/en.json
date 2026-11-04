@@ -177,7 +177,7 @@
     "flagship": {
       "eyebrow": "Flagship project",
       "title": "El Avistaje Sonoro",
-      "body": "TODO(contenido): summary of the flagship project and the sound room.",
+      "body": "TODO(contenido): The design and development of the sound room at Punta Ballena, and of sound experiences made for it. It grew out of Sonidos del Mar, the first experience, created for Whale Day.",
       "cta": "Listen"
     },
     "projects": {
@@ -189,8 +189,8 @@
       "cta": "See the formats"
     },
     "allies": {
-      "title": "Our network",
-      "body": "TODO(contenido): allies and their logos."
+      "title": "Our support network",
+      "body": "TODO(contenido): the people and organizations who have taken part, and take part, in the projects."
     },
     "closing": {
       "title": "Shall we get in the water?",
@@ -212,7 +212,10 @@
     "listTitle": "Project index",
     "list": [
       "El Avistaje Sonoro",
+      "Sonidos del Mar",
       "Kelp Roots",
+      "Anawa",
+      "Danza al Mar",
       "TODO(contenido): more projects"
     ]
   },
@@ -235,13 +238,17 @@
         "role": "TODO(contenido): role and bio."
       },
       {
-        "name": "Gonzalo",
-        "role": "TODO(contenido): surname, role and bio."
+        "name": "Gonzalo Bravo",
+        "role": "TODO(contenido): role and bio."
+      },
+      {
+        "name": "Natalia Aga Milovic",
+        "role": "TODO(contenido): role and bio."
       }
     ],
     "network": {
-      "title": "Our network",
-      "body": "TODO(contenido): the network as a living community."
+      "title": "Our support network",
+      "body": "TODO(contenido): Oceanar doesn’t exist without its support network: everyone who has taken part, and takes part, in its projects."
     }
   },
   "talkPage": {
