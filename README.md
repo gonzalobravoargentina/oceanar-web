@@ -36,12 +36,13 @@ Abrí <http://localhost:3000>. Te redirige a `/es` o `/en` según el idioma de t
 src/
   app/[lang]/        Páginas y layout (un segmento por idioma: es, en)
   components/        Componentes compartidos (navegación, secciones)
-  drawings/          Dibujos a mano (SVG) de Cande
   i18n/              Idiomas, diccionarios y mapa de URLs
     dictionaries/    es.json y en.json — acá viven los textos del sitio
     routes.ts        Slugs de cada página en cada idioma
   proxy.ts           Redirige / a /es o /en según el idioma del navegador
 docs/pendientes.md   Decisiones y contenidos pendientes
+public/images/       Fotos y dibujos optimizados para la web
+scripts/             optimize-media.mjs: genera esas versiones desde los originales
 ```
 
 ## Idiomas

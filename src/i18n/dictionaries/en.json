@@ -281,5 +281,19 @@
     "title": "Let’s talk",
     "lead": "TODO(contenido): a warm invitation to talk.",
     "note": "The form and booking arrive in stage 5."
+  },
+  "media": {
+    "photos": {
+      "surfaceDiver": "A person diving just below the surface, sky above and rocky seabed below",
+      "kelpForestLight": "Golden light shining through an underwater kelp forest",
+      "southernRightWhale": "A southern right whale swimming underwater",
+      "whaleUnderSurface": "A southern right whale under the sunlit surface",
+      "jellyfish": "A jellyfish with long tentacles in dark water",
+      "diverReef": "A person diving beside a rock, with light coming down from the surface",
+      "fishSchool": "A school of reddish fish swimming together",
+      "wave": "A wave breaking in open water",
+      "surfaceAlgae": "Seaweed floating near the surface, seen from below",
+      "kelpAerial": "Aerial view of kelp forests along a rocky coast"
+    }
   }
 }

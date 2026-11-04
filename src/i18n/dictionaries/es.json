@@ -281,5 +281,19 @@
     "title": "Conversemos",
     "lead": "TODO(contenido): invitación cálida a conversar.",
     "note": "El formulario y la agenda llegan en la etapa 5."
+  },
+  "media": {
+    "photos": {
+      "surfaceDiver": "Persona buceando bajo la superficie, con el cielo arriba y el fondo rocoso abajo",
+      "kelpForestLight": "Luz dorada atravesando un bosque de cachiyuyo bajo el agua",
+      "southernRightWhale": "Ballena franca austral nadando bajo el agua",
+      "whaleUnderSurface": "Ballena franca bajo la superficie iluminada",
+      "jellyfish": "Medusa de tentáculos largos sobre el agua oscura",
+      "diverReef": "Persona buceando junto a una roca, con luz que entra desde la superficie",
+      "fishSchool": "Cardumen de peces rojizos nadando juntos",
+      "wave": "Ola rompiendo en mar abierto",
+      "surfaceAlgae": "Algas flotando cerca de la superficie, vistas desde abajo",
+      "kelpAerial": "Vista aérea de bosques de algas junto a la costa rocosa"
+    }
   }
 }

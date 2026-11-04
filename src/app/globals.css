@@ -136,6 +136,13 @@
       animation-range: entry 20% cover 45%;
     }
 
+    /* Hand-drawn images uncover themselves from left to right. */
+    .unveil {
+      animation: unveil linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 40%;
+    }
+
     /* Slow parallax for images inside a clipped frame. */
     .drift {
       animation: drift linear both;
@@ -161,6 +168,15 @@
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes unveil {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
 

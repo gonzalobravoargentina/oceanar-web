@@ -1,6 +1,6 @@
 // Content blocks shared by the home page and the inner pages.
 import type { Dictionary } from "@/i18n/dictionaries";
-import { Drawing } from "./Drawing";
+import { isSketchName, Sketch } from "./Sketch";
 import { Section, type Tone } from "./Section";
 
 type Props = { dict: Dictionary; tone?: Tone; eyebrow?: string };
@@ -51,13 +51,16 @@ export function OceanCulture({ dict, tone = "kelp", eyebrow }: Props) {
       <ol className="grid gap-12 sm:grid-cols-3">
         {culture.conditions.map((condition) => (
           <li key={condition.drawing} className="rise space-y-5">
-            <Drawing
-              name={condition.drawing}
-              label={
-                dict.drawing[condition.drawing as keyof Dictionary["drawing"]]
-              }
-              className="draw text-kelp-ochre size-28 md:size-36"
-            />
+            {isSketchName(condition.drawing) && (
+              <Sketch
+                name={condition.drawing}
+                alt={
+                  dict.drawing[condition.drawing as keyof Dictionary["drawing"]]
+                }
+                displayWidth={240}
+                className="h-28 w-auto max-w-full md:h-36"
+              />
+            )}
             <p className="text-xl leading-snug">{condition.text}</p>
           </li>
         ))}
