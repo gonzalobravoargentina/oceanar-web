@@ -36,7 +36,9 @@ export function ImageSlot({
         {/* Soft light shafts, as seen from under the water. */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_0%,rgb(246_243_236/0.35),transparent_60%)]" />
       </div>
-      <p className="label bg-ink/60 text-foam absolute bottom-3 left-3 rounded-sm px-2 py-1">
+      <p
+        className={`label bg-ink/60 text-foam absolute left-3 rounded-sm px-2 py-1 ${captionTop ? "top-3" : "bottom-3"}`}
+      >
         {pending} · {description}
       </p>
     </div>
