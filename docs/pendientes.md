@@ -55,6 +55,6 @@ grep -rn "TODO(contenido)" src
 - [ ] **Sonidos del Mar en la web.** Cómo adaptar una experiencia pensada para auriculares y antifaz.
 - [ ] **Sonido.** Si la preferencia de sonido se recuerda solo durante la visita o también la próxima vez que la persona entra al sitio.
 - [ ] **Edición sin Claude.** Si en el futuro otras personas necesitan cargar proyectos sin pasar por Claude, evaluar un editor visual (CMS) gratuito conectado al repo.
-- [ ] **Video de fondo.** El video del mar está solo en la rama `prueba`. Para el prototipo del inicio (etapa 2) hay que traer el archivo o reemplazarlo por material real.
+- [ ] **Video de fondo.** El video del mar ya está en `main` (`BackgroundVideo`), pero el esqueleto de la etapa 1 no lo muestra. Vuelve en el prototipo del inicio (etapa 2), hasta tener material real.
 - [ ] **Lanzamiento.** Al mergear cada etapa a `main`, oceanar.org pasa a mostrar el sitio en construcción en lugar de la página "Estamos trabajando en el sitio". Decidir antes del primer merge.
 - [ ] Al lanzar: pasar las redirecciones de slugs a permanentes (`src/i18n/routes.ts`).
