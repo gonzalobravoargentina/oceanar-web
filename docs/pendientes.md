@@ -50,7 +50,7 @@ grep -rn "TODO(contenido)" src
 ### Técnica e infraestructura
 
 - [ ] **Créditos de fotos.** Confirmar autoría de cada foto usada en el inicio (los nombres de archivo sugieren a Gonzalo Bravo en varias) y cómo se muestran los créditos.
-- [ ] **Videos.** Los videos de `material-oceanar` todavía no están en el sitio: para comprimirlos hace falta instalar `ffmpeg` en la computadora (consultar antes de instalarlo).
+- [x] **Videos.** ffmpeg instalado en `~/.oceanar-tools` (paquete `ffmpeg-static`, fuera del repo). Tres videos en el inicio: ballena con cría (proyecto insignia), domo 360° (VER) y cardumen (Red de sostén). Faltan las anémonas y las otras tomas aéreas, para otras páginas.
 
 - [ ] **Material audiovisual y repositorio público.** El repo es público: todo lo que se sube a `public/` se puede descargar. Como va a haber mucho material audiovisual (y parte se vende o licencia), decidir si el repo pasa a privado y dónde se aloja el material pesado.
 - [ ] **Formulario de contacto.** En la etapa 5 se diseñan solo los campos. Queda por decidir a dónde llegan los mensajes (mail, planilla, servicio).

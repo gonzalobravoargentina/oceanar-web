@@ -294,6 +294,11 @@
       "wave": "A wave breaking in open water",
       "surfaceAlgae": "Seaweed floating near the surface, seen from below",
       "kelpAerial": "Aerial view of kelp forests along a rocky coast"
+    },
+    "videos": {
+      "whaleCalfAerial": "Aerial video of a southern right whale swimming beside its white calf",
+      "reefFishSchool": "Video of a school of fish over a bed of red seaweed",
+      "domeProjection": "Video of an underwater film projected in a dome, showing a sea turtle"
     }
   }
 }

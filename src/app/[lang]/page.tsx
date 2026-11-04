@@ -6,6 +6,7 @@ import {
   OceanCulture,
   VerbEntry,
 } from "@/components/OceanContent";
+import { LoopVideo } from "@/components/LoopVideo";
 import { Photo } from "@/components/Photo";
 import { RevealText } from "@/components/RevealText";
 import { Section } from "@/components/Section";
@@ -104,12 +105,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         aria-labelledby="flagship-title"
         className="text-foam relative isolate flex min-h-svh flex-col justify-end"
       >
-        <Photo
-          name="southern-right-whale"
-          alt={alt.southernRightWhale}
-          drift
-          className="absolute inset-0 -z-10"
-        />
+        <div className="absolute inset-0 -z-10">
+          <LoopVideo
+            name="whale-calf-aerial"
+            label={dict.media.videos.whaleCalfAerial}
+          />
+        </div>
         <div className="from-ink via-ink/50 to-sea-grey/40 absolute inset-0 -z-10 bg-linear-to-t" />
         <div className="mx-auto w-full max-w-6xl space-y-6 px-5 pt-40 pb-20 md:pb-32">
           <p className="label flex items-center gap-3">
@@ -152,12 +153,23 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                   href={href(lang, "projects")}
                   className="group relative block overflow-hidden rounded-2xl"
                 >
-                  <Photo
-                    name={photo.name}
-                    alt={alt[photo.alt]}
-                    sizes="(min-width: 640px) 33vw, 80vw"
-                    className="ease-tide relative aspect-[3/4] transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
+                  {category.id === "see" ? (
+                    // VER: the 360° dome experience, in motion.
+                    <div className="relative aspect-[3/4]">
+                      <LoopVideo
+                        name="dome-projection"
+                        label={dict.media.videos.domeProjection}
+                        className="ease-tide transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                  ) : (
+                    <Photo
+                      name={photo.name}
+                      alt={alt[photo.alt]}
+                      sizes="(min-width: 640px) 33vw, 80vw"
+                      className="ease-tide relative aspect-[3/4] transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  )}
                   <span className="from-ink/70 absolute inset-0 bg-linear-to-t to-transparent" />
                   <span className="display text-foam absolute inset-x-0 bottom-6 text-center text-4xl md:text-5xl">
                     {category.name}
@@ -186,12 +198,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       {/* 9. The support network: a school of fish, a current of names. */}
       <section id="allies" aria-labelledby="allies-title">
         <div className="text-foam relative isolate flex min-h-[70svh] items-end">
-          <Photo
-            name="fish-school"
-            alt={alt.fishSchool}
-            drift
-            className="absolute inset-0 -z-10"
-          />
+          <div className="absolute inset-0 -z-10">
+            <LoopVideo
+              name="reef-fish-school"
+              label={dict.media.videos.reefFishSchool}
+            />
+          </div>
           <div className="from-ink/80 absolute inset-0 -z-10 bg-linear-to-t to-transparent" />
           <div className="mx-auto w-full max-w-6xl space-y-5 px-5 pb-16">
             <h2 id="allies-title" className="display rise text-5xl sm:text-7xl">

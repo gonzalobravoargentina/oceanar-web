@@ -294,6 +294,11 @@
       "wave": "Ola rompiendo en mar abierto",
       "surfaceAlgae": "Algas flotando cerca de la superficie, vistas desde abajo",
       "kelpAerial": "Vista aérea de bosques de algas junto a la costa rocosa"
+    },
+    "videos": {
+      "whaleCalfAerial": "Video aéreo de una ballena franca austral nadando junto a su cría blanca",
+      "reefFishSchool": "Video de un cardumen de peces sobre un fondo de algas rojas",
+      "domeProjection": "Video de una proyección submarina en un domo, con una tortuga marina"
     }
   }
 }
