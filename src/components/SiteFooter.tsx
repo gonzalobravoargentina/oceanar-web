@@ -7,16 +7,17 @@ type Props = { lang: Locale; dict: Dictionary };
 
 export function SiteFooter({ lang, dict }: Props) {
   return (
-    <footer className="mt-auto border-t border-current/20">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm md:flex-row md:justify-between">
-        <p>
-          {dict.meta.siteName} · {dict.footer.place}
-        </p>
+    <footer className="bg-ink text-foam">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-16 md:flex-row md:items-end md:justify-between">
+        <div className="space-y-3">
+          <p className="display text-4xl md:text-6xl">{dict.meta.siteName}</p>
+          <p className="label opacity-80">{dict.footer.place}</p>
+        </div>
         <nav aria-label={dict.footer.navLabel}>
-          <ul className="flex flex-wrap gap-x-4 gap-y-2">
+          <ul className="label grid grid-cols-2 gap-x-8 gap-y-3">
             {routeKeys.map((key) => (
               <li key={key}>
-                <Link href={href(lang, key)} className="hover:underline">
+                <Link href={href(lang, key)} className="hover:text-kelp-amber">
                   {dict.nav[key]}
                 </Link>
               </li>

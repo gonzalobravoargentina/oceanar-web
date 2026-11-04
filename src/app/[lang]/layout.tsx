@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, Fraunces } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { locales } from "@/i18n/config";
@@ -8,15 +8,19 @@ import { pageMetadata } from "@/i18n/metadata";
 import { resolveLang, resolveLocale } from "@/i18n/page";
 import "../globals.css";
 
-// PROVISIONAL typography: neutral placeholders until the identity is defined.
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// PROVISIONAL typography (not the final identity): a wide grotesque for
+// display and a soft serif for reading, after the references Cande chose.
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  axes: ["wdth"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
+  axes: ["opsz", "SOFT"],
 });
 
 export function generateStaticParams() {
@@ -46,12 +50,12 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a
           href="#content"
-          className="focus:bg-background sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:p-2"
+          className="label focus:bg-wind sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-70 focus:p-3"
         >
           {dict.nav.skipToContent}
         </a>

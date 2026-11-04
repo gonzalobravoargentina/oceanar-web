@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * PROVISIONAL VISUAL TOKENS
+ * Not Oceanar's final identity: Cande is redefining it. Everything visual
+ * (colors, fonts, textures, motion) lives here so it can change in one place.
+ *
+ * Palette taken from the territory:
+ * - wind / sky: Patagonian light (washed whites and blues)
+ * - kelp: the cachiyuyo forest under water (amber, ochre, olive)
+ * - sea: the cold deep sea (green-grey, deep blue, ink)
+ */
+@theme {
+  --color-wind: #f3efe6; /* blanco de viento: page paper */
+  --color-sand: #e7ddc8;
+  --color-sky: #cfdfe4; /* celeste lavado */
+  --color-kelp-amber: #c28a2c;
+  --color-kelp-ochre: #8f6420;
+  --color-kelp-olive: #5d6a38;
+  --color-sea-grey: #4d6561; /* verde-gris */
+  --color-sea-deep: #173444;
+  --color-ink: #0d1c26; /* azul tinta: text on light, deepest water */
+  --color-foam: #f6f3ec; /* text on dark */
+
+  --color-background: var(--color-wind);
+  --color-foreground: var(--color-ink);
+
+  /* Provisional type: a wide grotesque for display, a soft serif for reading. */
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-tide: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-serif);
+  }
+
+  /* Film grain over the whole page (texture reference: oceanculturelife.com,
+     projectceti.org). Purely decorative. */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.09;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-kelp-amber);
+    outline-offset: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Wide, uppercase display type. */
+  .display {
+    font-family: var(--font-display);
+    font-stretch: 125%;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
+  }
+
+  /* Small uppercase label, like a field note. */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 0.25rem;
+    padding: 0.8rem 1.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-ink);
+    color: var(--color-foam);
+    transition:
+      background-color 300ms var(--ease-tide),
+      transform 300ms var(--ease-tide);
+  }
+  .btn:hover {
+    background: var(--color-kelp-ochre);
+    transform: translateY(-2px);
+  }
+  .btn-light {
+    background: var(--color-foam);
+    color: var(--color-ink);
+  }
+  .btn-light:hover {
+    background: var(--color-kelp-amber);
+    color: var(--color-ink);
+  }
+}
+
+/*
+ * MOTION: only for people who haven't asked for reduced motion, and only
+ * where the browser supports scroll-driven animations. Elsewhere the
+ * content simply shows, fully visible.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    /* Blocks rise gently into view, like coming up through the water. */
+    .rise {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+
+    /* Hand-drawn lines draw themselves while scrolling. */
+    .draw :is(path, circle, ellipse, line, polyline) {
+      stroke-dasharray: 1;
+      animation: draw linear both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 45%;
+    }
+
+    /* Slow parallax for images inside a clipped frame. */
+    .drift {
+      animation: drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(-8%) scale(1.15);
+  }
+  to {
+    transform: translateY(8%) scale(1.15);
+  }
+}
+
+@keyframes tide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

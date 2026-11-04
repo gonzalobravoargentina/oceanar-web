@@ -19,7 +19,7 @@ export function LanguageSwitcher({ lang, labels }: Props) {
 
   return (
     <nav aria-label={labels.label}>
-      <ul className="flex gap-3 text-sm">
+      <ul className="label flex gap-3">
         {locales.map((locale) => (
           <li key={locale}>
             <Link
@@ -27,7 +27,7 @@ export function LanguageSwitcher({ lang, labels }: Props) {
               hrefLang={locale}
               lang={locale}
               aria-current={locale === lang ? "true" : undefined}
-              className="uppercase hover:underline aria-[current=true]:font-semibold aria-[current=true]:underline"
+              className="underline-offset-8 hover:underline aria-[current=true]:underline"
             >
               <span aria-hidden="true">{locale}</span>
               <span className="sr-only">{labels[locale]}</span>

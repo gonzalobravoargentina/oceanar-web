@@ -168,7 +168,9 @@
   "home": {
     "hero": {
       "question": "¿Qué es oceanar?",
-      "scrollHint": "Bajá para descubrirlo"
+      "scrollHint": "Bajá para descubrirlo",
+      "place": "Costa patagónica · Chubut",
+      "water": "Agua fría · Mar argentino"
     },
     "intro": {
       "body": "TODO(contenido): Creamos experiencias para aprender a vincularse con el mar, vivas donde vivas. Desde la costa patagónica de Chubut diseñamos actividades que estimulan capacidades acuáticas: físicas y científicas, pero también espirituales, relacionales y vinculares.",
@@ -183,19 +185,43 @@
     "projects": {
       "title": "Proyectos",
       "body": "TODO(contenido): selección de 3 o 4 proyectos.",
-      "cta": "Ver todos los proyectos"
+      "cta": "Ver todos los proyectos",
+      "open": "Ver proyectos"
     },
     "work": {
       "cta": "Ver los formatos"
     },
     "allies": {
       "title": "Red de sostén",
-      "body": "TODO(contenido): las personas y organizaciones que participaron y participan en los proyectos."
+      "body": "TODO(contenido): las personas y organizaciones que participaron y participan en los proyectos.",
+      "names": [
+        "TODO(contenido): nombres de la red de sostén",
+        "residentes",
+        "científicas",
+        "artistas",
+        "anfitriones del territorio"
+      ]
     },
     "closing": {
       "title": "¿Nos metemos al agua?",
       "body": "TODO(contenido): invitación a agendar una conversación.",
       "cta": "Agendar una conversación"
+    },
+    "depth": {
+      "surface": "Superficie",
+      "m3": "−3 m",
+      "m8": "−8 m",
+      "m15": "−15 m",
+      "m20": "−20 m",
+      "up": "De vuelta a la superficie"
+    },
+    "photo": {
+      "pending": "Foto pendiente",
+      "intro": "buceo en el bosque de cachiyuyo",
+      "flagship": "la sala sonora en Punta Ballena",
+      "see": "video subacuático",
+      "listen": "hidrófono en el agua",
+      "inhabit": "residencia en el bosque de cachiyuyo"
     }
   },
   "oceanarPage": {

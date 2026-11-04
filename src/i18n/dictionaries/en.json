@@ -168,7 +168,9 @@
   "home": {
     "hero": {
       "question": "What is oceanar?",
-      "scrollHint": "Scroll down to find out"
+      "scrollHint": "Scroll down to find out",
+      "place": "Patagonian coast · Chubut",
+      "water": "Cold water · Argentine sea"
     },
     "intro": {
       "body": "TODO(contenido): We create experiences for learning to bond with the sea, wherever you live. From the Patagonian coast of Chubut, we design activities that build aquatic capacities: physical and scientific, but also spiritual and relational.",
@@ -183,19 +185,43 @@
     "projects": {
       "title": "Projects",
       "body": "TODO(contenido): a selection of 3 or 4 projects.",
-      "cta": "See all projects"
+      "cta": "See all projects",
+      "open": "See projects"
     },
     "work": {
       "cta": "See the formats"
     },
     "allies": {
       "title": "Our support network",
-      "body": "TODO(contenido): the people and organizations who have taken part, and take part, in the projects."
+      "body": "TODO(contenido): the people and organizations who have taken part, and take part, in the projects.",
+      "names": [
+        "TODO(contenido): names in the support network",
+        "residents",
+        "scientists",
+        "artists",
+        "local hosts"
+      ]
     },
     "closing": {
       "title": "Shall we get in the water?",
       "body": "TODO(contenido): invitation to book a conversation.",
       "cta": "Book a conversation"
+    },
+    "depth": {
+      "surface": "Surface",
+      "m3": "−3 m",
+      "m8": "−8 m",
+      "m15": "−15 m",
+      "m20": "−20 m",
+      "up": "Back to the surface"
+    },
+    "photo": {
+      "pending": "Photo to come",
+      "intro": "diving in the kelp forest",
+      "flagship": "the sound room at Punta Ballena",
+      "see": "underwater video",
+      "listen": "hydrophone in the water",
+      "inhabit": "residency in the kelp forest"
     }
   },
   "oceanarPage": {

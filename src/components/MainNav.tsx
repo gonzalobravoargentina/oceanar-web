@@ -29,27 +29,37 @@ export function MainNav({ lang, labels }: Props) {
   const current = (key: RouteKey) => (segment === key ? "page" : undefined);
 
   return (
-    <nav aria-label={labels.label} className="flex items-center gap-4">
+    <nav aria-label={labels.label} className="flex items-center gap-2 sm:gap-4">
       <button
         type="button"
-        className="rounded border border-current px-3 py-1 text-sm md:hidden"
+        className="flex size-10 flex-col items-center justify-center gap-1.5 rounded-sm border border-current lg:hidden"
         aria-expanded={open}
         aria-controls="main-menu"
         onClick={() => setOpenOn(open ? false : segment)}
       >
-        {open ? labels.closeMenu : labels.openMenu}
+        <span className="sr-only">
+          {open ? labels.closeMenu : labels.openMenu}
+        </span>
+        <span
+          aria-hidden="true"
+          className={`h-px w-5 bg-current transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+        />
+        <span
+          aria-hidden="true"
+          className={`h-px w-5 bg-current transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+        />
       </button>
 
       <ul
         id="main-menu"
-        className={`${open ? "flex" : "hidden"} bg-background absolute inset-x-0 top-full flex-col gap-3 border-b border-current/20 p-4 md:static md:flex md:flex-row md:gap-5 md:border-0 md:p-0`}
+        className={`${open ? "flex" : "hidden"} label border-ink/10 bg-wind absolute inset-x-0 top-full flex-col gap-5 border-b p-6 lg:static lg:flex lg:flex-row lg:gap-6 lg:border-0 lg:bg-transparent lg:p-0`}
       >
         {menuKeys.map((key) => (
           <li key={key}>
             <Link
               href={href(lang, key)}
               aria-current={current(key)}
-              className="hover:underline aria-[current=page]:font-semibold aria-[current=page]:underline"
+              className="underline-offset-8 hover:underline aria-[current=page]:underline"
             >
               {labels[key]}
             </Link>
@@ -60,7 +70,7 @@ export function MainNav({ lang, labels }: Props) {
       <Link
         href={href(lang, "talk")}
         aria-current={current("talk")}
-        className="rounded-full border border-current px-4 py-1 font-semibold whitespace-nowrap"
+        className="btn px-3 py-2 text-[0.7rem] whitespace-nowrap sm:px-4 sm:text-[0.85rem]"
       >
         {labels.talk}
       </Link>
