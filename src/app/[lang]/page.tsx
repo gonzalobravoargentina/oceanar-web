@@ -5,6 +5,7 @@ import { Hero } from "@/components/Hero";
 import { HeadlinePanel } from "@/components/HeadlinePanel";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
+import { SITE_URL, SOCIAL_URLS } from "@/lib/site";
 
 // Opens a WhatsApp chat with Oceanar (number in international format).
 const WHATSAPP_URL = "https://wa.me/5492804557665";
@@ -22,8 +23,30 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);
 
+  // Tells search engines who Oceanar is.
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Oceanar",
+    url: SITE_URL,
+    description: dict.meta.description,
+    sameAs: SOCIAL_URLS,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Puerto Madryn",
+      addressRegion: "Chubut",
+      addressCountry: "AR",
+    },
+  };
+
   return (
     <main className="flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organization).replace(/</g, "\\u003c"),
+        }}
+      />
       <nav className="absolute top-0 right-0 left-0 z-20 flex items-center justify-between gap-4 px-6 py-5 text-sm">
         <a
           href={WHATSAPP_URL}
