@@ -1,0 +1,206 @@
+/*
+ * The sentence "OCEANAR es poner la cultura oceánica en acción." in five
+ * parts (see `actionParts` in the dictionaries):
+ *   0 the name (OCEANAR)   1 small connector   2 medium word
+ *   3 the big accent word  4 the closing words
+ * Each part flies in from a different side when the section scrolls into
+ * view (`data-in="true"`).
+ * A wave-shaped underline is drawn under the big word once it has landed.
+ */
+
+.act-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.act-root {
+  position: relative;
+  display: flex;
+  min-height: 90svh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+}
+
+.act {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 100%;
+  max-width: 72rem;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  justify-content: center;
+  column-gap: clamp(1rem, 4vw, 3rem);
+  row-gap: 0.1rem;
+  text-align: center;
+}
+
+.act .line {
+  display: contents;
+}
+
+/* ---- The five parts ---- */
+
+.act .w {
+  position: relative;
+  display: block;
+  line-height: 0.95;
+  opacity: 0;
+}
+
+.act .w0 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-family: var(--font-oswald), sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: clamp(3.25rem, 13vw, 7.5rem);
+}
+
+.act .w1 {
+  justify-self: end;
+  font-family: var(--font-playfair), serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, 3.4vw, 1.9rem);
+}
+
+.act .w2 {
+  justify-self: start;
+  font-family: var(--font-playfair), serif;
+  font-weight: 900;
+  font-size: clamp(2.25rem, 8vw, 4.75rem);
+}
+
+.act .w3 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  color: var(--ocean-teal);
+  font-family: var(--font-playfair), serif;
+  font-weight: 900;
+  font-size: clamp(3rem, 13vw, 8rem);
+}
+
+.act .w4 {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-family: var(--font-playfair), serif;
+  font-style: italic;
+  font-size: clamp(2rem, 7vw, 4rem);
+}
+
+/* ---- Cuatro vientos: each part flies in from a different side ---- */
+
+/* Where each part starts (--fx, --fy), its tilt and how blurred it is. */
+.act .w0 {
+  --fx: -110vw;
+  --fy: 0;
+  --r0: -4deg;
+  --r1: 0deg;
+}
+
+.act .w1 {
+  --fx: 0;
+  --fy: -70vh;
+  --r0: -14deg;
+  --r1: -3deg;
+}
+
+.act .w2 {
+  --fx: 110vw;
+  --fy: 0;
+  --r0: 10deg;
+  --r1: 2deg;
+}
+
+.act .w3 {
+  --fx: 0;
+  --fy: 0;
+  --s0: 0.15;
+  --b0: 24px;
+  --r0: -8deg;
+  --r1: 0deg;
+}
+
+.act .w4 {
+  --fx: 0;
+  --fy: 70vh;
+  --r0: 6deg;
+  --r1: -2deg;
+}
+
+[data-in="true"] .act .w {
+  animation: wind-in 1.2s cubic-bezier(0.34, 1.35, 0.5, 1) both;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes wind-in {
+  from {
+    opacity: 1;
+    filter: blur(var(--b0, 0px));
+    transform: translate(var(--fx), var(--fy)) rotate(var(--r0, 0deg))
+      scale(var(--s0, 1));
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0) rotate(var(--r1, 0deg)) scale(1);
+  }
+}
+
+/* ---- Wave underline under the big word, drawn left to right ---- */
+
+.stroke-under {
+  position: absolute;
+  bottom: -0.14em;
+  left: -4%;
+  width: 108%;
+  height: 0.42em;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.stroke-under path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wipe {
+  clip-path: inset(0 100% 0 0);
+}
+
+[data-in="true"] .wipe {
+  animation: wipe-in 1.6s cubic-bezier(0.5, 0, 0.2, 1) both;
+  animation-delay: 2.1s;
+}
+
+@keyframes wipe-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* ---- Visitors who prefer reduced motion get the finished sentence ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .act-root *,
+  .act-root {
+    animation: none !important;
+  }
+
+  .act .w {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .wipe {
+    clip-path: none !important;
+  }
+}

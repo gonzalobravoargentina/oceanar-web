@@ -1,17 +1,33 @@
 {
   "meta": {
-    "title": "Oceanar · We are working on the site",
-    "description": "We are building the new Oceanar website. You will be able to visit it very soon."
+    "title": "Oceanar · Ocean experiences",
+    "description": "To ocean is to put ocean culture into action. Sound art, immersive experiences and ocean culture from Puerto Madryn, Patagonia."
   },
-  "construction": {
-    "badge": "Under construction",
-    "title": "We are working on the site",
-    "body": "We are building the new Oceanar website. You will be able to visit it very soon.",
-    "footer": "Thank you for your patience."
-  },
-  "languageSwitcher": {
-    "label": "Language",
+  "nav": {
+    "contact": "Contact",
+    "contactLabel": "Contact on WhatsApp",
+    "languageLabel": "Language",
     "es": "Español",
     "en": "English"
+  },
+  "hero": {
+    "wordmark": "Oceanar",
+    "partOfSpeech": "(verb)",
+    "tagline": "sound art · ocean culture · immersive experiences",
+    "conjugations": ["I ocean", "You ocean", "We ocean", "They ocean"],
+    "scrollLabel": "Keep scrolling"
+  },
+  "action": "TO OCEAN is to put ocean culture into action.",
+  "actionParts": ["TO OCEAN", "is to put", "ocean", "culture", "into action."],
+  "headlines": [
+    "immersive experiences",
+    "sound ecology",
+    "social technology",
+    "sea stories"
+  ],
+  "panel": {
+    "open": "See more",
+    "close": "Close",
+    "placeholder": "The content for this section goes here."
   }
 }
