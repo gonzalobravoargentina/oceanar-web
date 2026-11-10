@@ -1,8 +1,21 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { BackgroundVideo } from "@/components/BackgroundVideo";
+import { ActionText } from "@/components/ActionText";
+import { Hero } from "@/components/Hero";
+import { HeadlinePanel } from "@/components/HeadlinePanel";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
+
+// Opens a WhatsApp chat with Oceanar (number in international format).
+const WHATSAPP_URL = "https://wa.me/5492804557665";
+
+// One clip per headline, in the same order as `headlines` in the dictionaries.
+const headlineClips = [
+  "experiencias-inmersivas",
+  "ecologia-sonora",
+  "tecnologia-social",
+  "historias-de-mar",
+];
 
 export default async function Page({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
@@ -10,37 +23,61 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary(lang);
 
   return (
-    <main className="relative isolate flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center text-white">
-      <BackgroundVideo />
-      <span className="rounded-full border border-current px-4 py-1 text-sm tracking-widest uppercase opacity-70">
-        {dict.construction.badge}
-      </span>
-      <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">
-        {dict.construction.title}
-      </h1>
-      <p className="max-w-xl text-lg opacity-80">{dict.construction.body}</p>
-      <p className="text-sm opacity-60">{dict.construction.footer}</p>
-
-      <nav
-        aria-label={dict.languageSwitcher.label}
-        className="mt-6 flex gap-4 text-sm"
-      >
-        {locales.map((locale) => (
-          <Link
-            key={locale}
-            href={`/${locale}`}
-            hrefLang={locale}
-            aria-current={locale === lang ? "page" : undefined}
-            className={
-              locale === lang
-                ? "font-semibold underline underline-offset-4"
-                : "opacity-70 hover:opacity-100"
-            }
-          >
-            {dict.languageSwitcher[locale]}
-          </Link>
-        ))}
+    <main className="flex-1">
+      <nav className="absolute top-0 right-0 left-0 z-20 flex items-center justify-between gap-4 px-6 py-5 text-sm">
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={dict.nav.contactLabel}
+          className="font-heading tracking-[0.2em] uppercase opacity-80 transition-opacity hover:opacity-100"
+        >
+          {dict.nav.contact}
+        </a>
+        <div
+          role="group"
+          aria-label={dict.nav.languageLabel}
+          className="flex gap-4"
+        >
+          {locales.map((locale) => (
+            <Link
+              key={locale}
+              href={`/${locale}`}
+              hrefLang={locale}
+              aria-current={locale === lang ? "page" : undefined}
+              className={
+                locale === lang
+                  ? "underline underline-offset-4"
+                  : "opacity-70 transition-opacity hover:opacity-100"
+              }
+            >
+              {dict.nav[locale]}
+            </Link>
+          ))}
+        </div>
       </nav>
+
+      <Hero
+        wordmark={dict.hero.wordmark}
+        partOfSpeech={dict.hero.partOfSpeech}
+        tagline={dict.hero.tagline}
+        conjugations={dict.hero.conjugations}
+        scrollLabel={dict.hero.scrollLabel}
+      />
+
+      <ActionText text={dict.action} parts={dict.actionParts} />
+
+      {dict.headlines.map((headline, i) => (
+        <HeadlinePanel
+          key={headline}
+          index={i}
+          headline={headline}
+          clip={headlineClips[i]}
+          openLabel={dict.panel.open}
+          closeLabel={dict.panel.close}
+          placeholder={dict.panel.placeholder}
+        />
+      ))}
     </main>
   );
 }

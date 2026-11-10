@@ -1,17 +1,46 @@
 {
   "meta": {
-    "title": "Oceanar · Estamos trabajando en el sitio",
-    "description": "Estamos construyendo el nuevo sitio de Oceanar. Muy pronto vas a poder visitarlo."
+    "title": "Oceanar · Experiencias oceánicas",
+    "description": "Oceanar es poner la cultura oceánica en acción. Arte sonoro, experiencias inmersivas y cultura oceánica desde Puerto Madryn, Patagonia."
   },
-  "construction": {
-    "badge": "En construcción",
-    "title": "Estamos trabajando en el sitio",
-    "body": "Estamos construyendo el nuevo sitio de Oceanar. Muy pronto vas a poder visitarlo.",
-    "footer": "Gracias por tu paciencia."
-  },
-  "languageSwitcher": {
-    "label": "Idioma",
+  "nav": {
+    "contact": "Contacto",
+    "contactLabel": "Contacto por WhatsApp",
+    "languageLabel": "Idioma",
     "es": "Español",
     "en": "English"
+  },
+  "hero": {
+    "wordmark": "Oceanar",
+    "partOfSpeech": "(verbo)",
+    "tagline": "arte sonoro · cultura oceánica · experiencias inmersivas",
+    "conjugations": [
+      "Yo oceano",
+      "Tú oceanas",
+      "Nosotres oceanamos",
+      "Ellas oceanan",
+      "Vos oceanas",
+      "Él oceana"
+    ],
+    "scrollLabel": "Seguir bajando"
+  },
+  "action": "OCEANAR es poner la cultura oceánica en acción.",
+  "actionParts": [
+    "OCEANAR",
+    "es poner",
+    "la cultura",
+    "oceánica",
+    "en acción."
+  ],
+  "headlines": [
+    "experiencias inmersivas",
+    "ecología sonora",
+    "tecnología social",
+    "historias de mar"
+  ],
+  "panel": {
+    "open": "Ver más",
+    "close": "Cerrar",
+    "placeholder": "Acá va el contenido de esta sección."
   }
 }

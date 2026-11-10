@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Oswald, Playfair_Display } from "next/font/google";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
 import "../globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "900"],
 });
 
 export function generateStaticParams() {
@@ -45,7 +52,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${oswald.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
