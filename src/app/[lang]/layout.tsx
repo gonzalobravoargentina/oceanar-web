@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Montserrat, Oswald, Playfair_Display } from "next/font/google";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
+import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
 const montserrat = Montserrat({
@@ -34,10 +35,28 @@ export async function generateMetadata({
   const dict = await getDictionary(lang);
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
-      languages: Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+      canonical: `/${lang}`,
+      languages: {
+        ...Object.fromEntries(locales.map((l) => [l, `/${l}`])),
+        "x-default": "/es",
+      },
+    },
+    openGraph: {
+      type: "website",
+      siteName: "Oceanar",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      url: `/${lang}`,
+      locale: lang === "es" ? "es_AR" : "en_US",
+    },
+    twitter: {
+      card: "summary",
+      title: dict.meta.title,
+      description: dict.meta.description,
     },
   };
 }
