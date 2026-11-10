@@ -19,7 +19,7 @@ Hilo conductor del sitio, tomado del documento "Oceanar_IG" del Canva.
 
 El documento también define la **cultura oceánica**: sentir al océano como un ser vivo y no como un escenario, dejar que el mar enseñe cómo vivir y actuar desde ese vínculo (cuidando, creando, conectando).
 
-Cada obra del portfolio se nombra en el Canva con una acción: _tecnología social_ (Habitar las algas), _arte sonoro_ y _experiencias inmersivas_ (Sala de Punta Ballena Avistajes), _escucha profunda_ y _colabor-acción_ (experiencia sonora para Meraki en Bioferia, con Lula Gil), _presencia_ (proyección y conversación de Anawa), _historias de mar_ (Ojos al mar). Esas acciones son el puente entre el concepto y el portfolio.
+En el Canva, algunas obras aparecen junto a una acción (asignación de partida, **no definitiva**): _tecnología social_ (Habitar las algas), _arte sonoro_ y _experiencias inmersivas_ (Sala de Punta Ballena Avistajes), _escucha profunda_ y _colabor-acción_ (experiencia sonora para Meraki en Bioferia, con Lula Gil), _presencia_ (proyección y conversación de Anawa), _historias de mar_ (Ojos al mar). Esas acciones son el puente entre el concepto y el portfolio; cuáles proyectos van bajo cada titular se define después.
 
 ## Sensación
 
@@ -27,18 +27,26 @@ Inmersiva y profunda: fondos oscuros tipo mar adentro, **videos subacuáticos** 
 
 ## Mapa del sitio
 
+La estructura y los titulares son los del documento **Oceanar_IG** del Canva. La home sigue su recorrido:
+
 ```
-Home (inmersiva)
-├── Experiencias
-│   ├── Danza del Mar        (el cortometraje es Anawa)
-│   ├── Ojos al mar          (largometraje documental, coproducción)
-│   ├── Experiencias sonoras (Sonidos del mar, Sala sonora Punta Ballena)
-│   └── Videos 360 y domo inmersivo
-├── Charlas y talleres
-├── Asesorías                (empresas y ONG, cultura oceánica)
-├── Proyectos                (Habitar las algas, Océano de historias, Guía de campo)
-└── Contacto                 ("Llevá el mar a tu lugar")
+Home (inmersiva, video subacuático)
+├── Oceanar (v.)            definición + conjugación del verbo
+├── Cultura oceánica        qué es y cuándo una persona o comunidad la vive
+├── "Desde Oceanar, queremos poner eso en movimiento"
+├── Titulares (las acciones)
+│   ├── tecnología social
+│   ├── arte sonoro
+│   ├── escucha profunda
+│   ├── colabor-acción
+│   ├── presencia
+│   ├── experiencias inmersivas
+│   ├── expres-arte
+│   └── historias de mar
+└── Contacto                "Si tenés un proyecto que apunta en ese sentido, estamos para crear y colaborar"
 ```
+
+**Pendiente:** definir qué proyecto va bajo cada titular (se conversa después). En el Canva hay una asignación de partida, que se detalla más abajo y no es definitiva. También falta decidir dónde se ubican las charlas, los talleres y las asesorías (ver preguntas abiertas).
 
 Quedan **fuera por ahora**: página "Nosotros", blog o novedades.
 
@@ -50,18 +58,19 @@ La home es un recorrido que se baja como una inmersión. Propuesta de tramos:
 
 1. **Entrada:** video subacuático a pantalla completa. Sobre el video, **"Oceanar (v.)"** y la conjugación que va cambiando despacio (_Yo oceano… Nosotres oceanamos…_). El sonido del mar es opcional, con un botón visible (los navegadores no permiten reproducir sonido solos).
 2. **El verbo:** la definición breve y la frase "Oceanar es poner la cultura oceánica en acción".
-3. **Así oceanamos:** el portfolio como acciones. Cada obra aparece con su verbo y un video subacuático corto (_escuchar_, _estar presentes_, _contar historias de mar_, _co-crear_…) que enlaza a su página en Experiencias o Proyectos.
-4. **Charlas, talleres y asesorías:** "Si tenés un proyecto que apunta en ese sentido, estamos para crear y colaborar", con botón a Contacto.
-5. **Pie:** contacto, Instagram (@oceanar_seresdeagua) y ubicación (Puerto Madryn, Chubut).
+3. **Cultura oceánica:** qué es y cuándo una persona o comunidad la vive (siente al océano como un ser vivo, deja que el mar le enseñe, actúa desde ese vínculo: cuidando, creando, conectando).
+4. **Titulares:** los ocho titulares del Canva (_tecnología social, arte sonoro, escucha profunda, colabor-acción, presencia, experiencias inmersivas, expres-arte, historias de mar_). Cada uno lleva un video subacuático corto y, debajo, el proyecto que lo encarna.
+5. **Contacto:** "Desde Oceanar, queremos poner eso en movimiento. Si tenés un proyecto que apunta en ese sentido, estamos para crear y colaborar."
+6. **Pie:** Instagram (@oceanar_seresdeagua) y ubicación (Puerto Madryn, Chubut).
 
-Para que la navegación siga clara para programadores e instituciones, el **menú usa nombres directos** (Experiencias, Charlas y talleres, Asesorías, Proyectos, Contacto). Los verbos viven en la home y como etiqueta de cada obra, no reemplazan al menú.
+Los titulares del Canva son los que se usan como títulos en el sitio. El **menú** replica esa estructura; los nombres exactos se definen con Candelaria.
 
 **Videos de la home:**
 
 - Uno solo se carga al entrar (el de la entrada); el resto se carga cuando aparece en pantalla y se pausa al salir.
 - Cada clip es corto (unos 20 s), sin audio, liviano (WebM y MP4 de respaldo) y con imagen fija mientras carga.
 - Quien tiene activado "reducir movimiento" ve imágenes fijas.
-- Cada imagen subacuática lleva su crédito (por ejemplo, Anawa tiene dirección de fotografía subacuática de Laura Babahekian).
+- Las imágenes y videos subacuáticos de la home son de Gonzalo, no requieren crédito. El material de otras personas (por ejemplo, el tráiler de _Ojos al mar_) sí lleva crédito y permiso.
 
 ### Experiencias
 
@@ -119,8 +128,8 @@ Para Candelaria:
 Para Gonzalo:
 
 1. ¿Dónde está el material de _Sonidos del mar_, _Sala sonora Punta Ballena_, la experiencia sonora de Meraki en Bioferia y el domo? Si no está listo, van como "próximamente".
-2. **Videos subacuáticos para la home:** ¿dónde están los que tenemos (disco, Drive, otro)? ¿Cuáles son los mejores para la entrada y para cada verbo? ¿Quién filmó cada uno, para acreditarlo, y podemos usarlos todos?
-3. ¿Qué charlas, talleres y asesorías se ofrecen hoy, con qué formato y ejemplos?
+2. **Videos e imágenes:** están en el álbum de Google Fotos "OCEANAR | WEB" (al menos 15 videos de 13 s a 2 min 14 s, y fotos). Son de Gonzalo. Falta elegir los mejores para la entrada y para cada titular, y bajarlos a una carpeta local fuera del repo para prepararlos livianos.
+3. ¿Dónde van las charlas, los talleres y las asesorías dentro de esta estructura (bajo algún titular, una sección propia, el contacto)? ¿Qué se ofrece hoy, con qué formato y ejemplos?
 4. ¿A qué mail llegan las consultas? Se conecta con el pendiente del correo `@oceanar.org`.
 5. ¿Mostramos año en cada obra (por ejemplo "Danza del Mar, 2023")?
 6. ¿Quién pide permiso a la producción de _Ojos al mar_ para usar el tráiler?
