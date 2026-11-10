@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { retryPlayOnTouch } from "@/lib/retryPlayOnTouch";
 import { usePortrait } from "@/lib/usePortrait";
 import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
 
@@ -46,7 +47,7 @@ export function LoopVideo({ name, className = "" }: Props) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    if (visible) video.play().catch(() => {});
+    if (visible) video.play().catch(() => retryPlayOnTouch(video));
     else video.pause();
   }, [visible, near, portrait]);
 

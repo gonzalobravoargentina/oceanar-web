@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { retryPlayOnTouch } from "@/lib/retryPlayOnTouch";
 import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
 
 // Second of the hero clip at which the sea lion has moved the kelp. The
@@ -8,6 +9,9 @@ import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
 const REVEAL_AT_SECONDS = 7.2;
 // If the video cannot play (data saver, autoplay blocked), show the text anyway.
 const FALLBACK_REVEAL_MS = 4000;
+// If the video has not started after this long (autoplay blocked, slow
+// connection), show the text over the poster instead of waiting for it.
+const NOT_PLAYING_REVEAL_MS = 3000;
 const CONJUGATION_INTERVAL_MS = 3200;
 
 const base = "/videos/home/hero-lobo";
@@ -28,11 +32,24 @@ export function Hero({
   scrollLabel,
 }: Props) {
   const reduced = usePrefersReducedMotion();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [videoRevealed, setRevealed] = useState(false);
   const [index, setIndex] = useState(0);
   const [videoFailed, setVideoFailed] = useState(false);
   // With reduced motion there is no video to wait for.
   const revealed = videoRevealed || reduced;
+
+  // The text normally waits for the sea lion to move the kelp. If the browser
+  // does not let the video play, do not leave the header without its text.
+  useEffect(() => {
+    if (reduced) return;
+    const video = videoRef.current;
+    video?.play().catch(() => retryPlayOnTouch(video));
+    const id = setTimeout(() => {
+      if (!video || video.paused || video.currentTime === 0) setRevealed(true);
+    }, NOT_PLAYING_REVEAL_MS);
+    return () => clearTimeout(id);
+  }, [reduced]);
 
   useEffect(() => {
     if (!videoFailed) return;
@@ -58,6 +75,7 @@ export function Hero({
       >
         {!reduced && (
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
@@ -85,8 +103,9 @@ export function Hero({
         className="to-ocean-ink absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/10"
       />
 
+      {/* If the scripts never run (very old browsers) the text still appears after 12 s. */}
       <div
-        className={`flex flex-col items-center gap-6 px-6 transition-opacity duration-[2500ms] ease-out ${
+        className={`flex animate-[reveal-fallback_1s_ease-out_12s_forwards] flex-col items-center gap-6 px-6 transition-opacity duration-[2500ms] ease-out ${
           revealed ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -134,7 +153,7 @@ export function Hero({
       <a
         href="#accion"
         aria-label={scrollLabel}
-        className={`absolute bottom-8 transition-opacity duration-[2500ms] ${
+        className={`absolute bottom-8 animate-[reveal-fallback_1s_ease-out_12s_forwards] transition-opacity duration-[2500ms] ${
           revealed ? "opacity-100" : "opacity-0"
         }`}
       >
