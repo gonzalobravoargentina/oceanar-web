@@ -47,8 +47,12 @@ export function LoopVideo({ name, className = "" }: Props) {
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    if (visible) video.play().catch(() => retryPlayOnTouch(video));
-    else video.pause();
+    if (visible) {
+      video.play().catch((error: unknown) => {
+        video.dataset.playError = String((error as Error)?.name);
+        retryPlayOnTouch(video);
+      });
+    } else video.pause();
   }, [visible, near, portrait]);
 
   return (
@@ -74,8 +78,9 @@ export function LoopVideo({ name, className = "" }: Props) {
           poster={poster}
           className="h-full w-full object-cover"
         >
-          <source src={`${base}/${file}.webm`} type="video/webm" />
+          {/* MP4 (H.264) first: every phone plays it, with hardware decoding. */}
           <source src={`${base}/${file}.mp4`} type="video/mp4" />
+          <source src={`${base}/${file}.webm`} type="video/webm" />
         </video>
       )}
     </div>
