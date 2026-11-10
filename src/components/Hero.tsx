@@ -44,7 +44,10 @@ export function Hero({
   useEffect(() => {
     if (reduced) return;
     const video = videoRef.current;
-    video?.play().catch(() => retryPlayOnTouch(video));
+    video?.play().catch((error: unknown) => {
+      if (video) video.dataset.playError = String((error as Error)?.name);
+      if (video) retryPlayOnTouch(video);
+    });
     const id = setTimeout(() => {
       if (!video || video.paused || video.currentTime === 0) setRevealed(true);
     }, NOT_PLAYING_REVEAL_MS);
@@ -89,10 +92,11 @@ export function Hero({
             }}
             onError={() => setVideoFailed(true)}
           >
-            <source src={`${base}.webm`} type="video/webm" />
+            {/* MP4 (H.264) first: every phone plays it, with hardware decoding. */}
+            <source src={`${base}.mp4`} type="video/mp4" />
             <source
-              src={`${base}.mp4`}
-              type="video/mp4"
+              src={`${base}.webm`}
+              type="video/webm"
               onError={() => setVideoFailed(true)}
             />
           </video>

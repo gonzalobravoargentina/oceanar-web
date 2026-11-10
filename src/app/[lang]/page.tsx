@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ActionText } from "@/components/ActionText";
 import { Hero } from "@/components/Hero";
 import { HeadlinePanel } from "@/components/HeadlinePanel";
+import { VideoDebug } from "@/components/VideoDebug";
 import { getDictionary } from "@/i18n/dictionaries";
 import { hasLocale, locales } from "@/i18n/config";
 import { SITE_URL, SOCIAL_URLS } from "@/lib/site";
@@ -41,6 +42,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
 
   return (
     <main className="flex-1">
+      <VideoDebug />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
