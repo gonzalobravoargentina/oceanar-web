@@ -1,28 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { defaultLocale, hasLocale, locales, type Locale } from "@/i18n/config";
+import { defaultLocale, locales } from "@/i18n/config";
 
-// Picks the best supported locale from the Accept-Language header.
-function getLocale(request: NextRequest): Locale {
-  const header = request.headers.get("accept-language") ?? "";
-  const requested = header
-    .split(",")
-    .map((part) => {
-      const [tag, q] = part.trim().split(";q=");
-      return {
-        language: tag.toLowerCase().split("-")[0],
-        q: q ? Number(q) : 1,
-      };
-    })
-    .filter(({ language }) => language)
-    .sort((a, b) => b.q - a.q);
-
-  return (
-    (requested.find(({ language }) => hasLocale(language))
-      ?.language as Locale) ?? defaultLocale
-  );
-}
-
+// Anyone who lands on a path without a language goes to the default one
+// (Spanish), whatever language their browser asks for. English is reached with
+// the language switcher.
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const hasLocalePrefix = locales.some(
@@ -30,7 +12,7 @@ export function proxy(request: NextRequest) {
   );
   if (hasLocalePrefix) return;
 
-  request.nextUrl.pathname = `/${getLocale(request)}${pathname === "/" ? "" : pathname}`;
+  request.nextUrl.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
   return NextResponse.redirect(request.nextUrl);
 }
 
