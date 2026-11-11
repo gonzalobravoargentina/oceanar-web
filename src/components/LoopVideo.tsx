@@ -18,7 +18,12 @@ const base = "/videos/home";
 
 // Clips that also have an AV1 version (same quality in fewer bytes). Browsers
 // that cannot play AV1 skip it and use the MP4.
-const AV1_CLIPS = new Set(["experiencias-inmersivas", "historias-de-mar"]);
+const AV1_CLIPS = new Set([
+  "experiencias-inmersivas",
+  "ecologia-sonora",
+  "tecnologia-social",
+  "historias-de-mar",
+]);
 
 // Decorative looping clip. The video only loads once it is near the viewport,
 // plays while visible and pauses when it leaves. Visitors who prefer reduced
