@@ -71,6 +71,13 @@ export function Hero({
 
   return (
     <section className="relative isolate flex h-svh min-h-[32rem] flex-col items-center justify-center overflow-hidden text-center">
+      {/* The poster is the first thing seen: ask for it right away. */}
+      <link
+        rel="preload"
+        as="image"
+        href={`${base}-poster.jpg`}
+        fetchPriority="high"
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-cover bg-center"

@@ -16,6 +16,10 @@ type Props = {
 
 const base = "/videos/home";
 
+// Clips that also have an AV1 version (same quality in fewer bytes). Browsers
+// that cannot play AV1 skip it and use the MP4.
+const AV1_CLIPS = new Set(["experiencias-inmersivas", "historias-de-mar"]);
+
 // Decorative looping clip. The video only loads once it is near the viewport,
 // plays while visible and pauses when it leaves. Visitors who prefer reduced
 // motion get the still poster instead. In portrait (phones) the vertical cut
@@ -29,6 +33,8 @@ export function LoopVideo({ name, className = "" }: Props) {
   const portrait = usePortrait();
   const file = portrait ? `${name}-movil` : name;
   const poster = `${base}/${file}-poster.jpg`;
+  // The vertical cuts for phones are only made in MP4.
+  const hasAv1 = !portrait && AV1_CLIPS.has(name);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -38,7 +44,7 @@ export function LoopVideo({ name, className = "" }: Props) {
         setVisible(entry.isIntersecting);
         if (entry.isIntersecting) setNear(true);
       },
-      { rootMargin: "200px" },
+      { rootMargin: "600px 0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -78,7 +84,13 @@ export function LoopVideo({ name, className = "" }: Props) {
           poster={poster}
           className="h-full w-full object-cover"
         >
-          {/* MP4 (H.264) first: every phone plays it, with hardware decoding. */}
+          {hasAv1 && (
+            <source
+              src={`${base}/${file}.av1.mp4`}
+              type='video/mp4; codecs="av01.0.08M.08"'
+            />
+          )}
+          {/* MP4 (H.264): every phone plays it, with hardware decoding. */}
           <source src={`${base}/${file}.mp4`} type="video/mp4" />
           <source src={`${base}/${file}.webm`} type="video/webm" />
         </video>
