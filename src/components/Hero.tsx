@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { retryPlayOnTouch } from "@/lib/retryPlayOnTouch";
 import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
@@ -120,8 +121,16 @@ export function Hero({
           revealed ? "opacity-100" : "opacity-0"
         }`}
       >
-        <h1 className="font-heading text-5xl font-medium tracking-[0.35em] uppercase sm:text-7xl">
-          <span className="pl-[0.35em]">{wordmark}</span>
+        <h1>
+          <Image
+            src="/brand/oceanar-logo-white.webp"
+            alt={wordmark}
+            width={1400}
+            height={196}
+            priority
+            unoptimized
+            className="h-auto w-[min(78vw,24rem)] sm:w-[min(60vw,36rem)]"
+          />
         </h1>
         {reduced ? (
           <div className="flex flex-col items-center gap-2">
