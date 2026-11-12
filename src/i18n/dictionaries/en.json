@@ -32,69 +32,87 @@
   "sections": [
     {
       "intro": "We blend art, technology and encounter to create immersive experiences that connect us sensitively with the ocean.",
-      "photoAlt": "A 360° camera inside a glass sphere, underwater",
       "items": [
         {
           "name": "Anawa",
-          "text": "An underwater short film from Argentine Patagonia."
+          "text": "An underwater short film from Argentine Patagonia.",
+          "photo": "anawa",
+          "photoAlt": "A dancer underwater in a red skirt, upside down"
         },
         {
           "name": "360° immersive audiovisuals",
-          "text": "Videos filmed underwater to feel the ocean from the inside."
+          "text": "Videos filmed underwater to feel the ocean from the inside.",
+          "photo": "audiovisuales-360",
+          "photoAlt": "A 360° camera inside a glass sphere, underwater"
         },
         {
           "name": "Immersive experience room",
-          "text": "Designed for Punta Ballena Avistajes."
+          "text": "Designed for Punta Ballena Avistajes.",
+          "photo": "sala-inmersiva",
+          "photoAlt": "Three people sitting in a room with blue light and speakers"
         }
       ]
     },
     {
       "intro": "Listening to the song born in the depths of the ocean reminds us how much it matters to live in a healthy environment.",
-      "photoAlt": "A southern right whale and her calf seen from above, in turquoise water",
       "items": [
         {
           "name": "Sonidos del mar",
-          "text": "An ocean sound experience built from cetacean vocalizations recorded with a hydrophone in Golfo Nuevo, Península Valdés."
+          "text": "An ocean sound experience built from cetacean vocalizations recorded with a hydrophone in Golfo Nuevo, Península Valdés.",
+          "photo": "sonidos-del-mar",
+          "photoAlt": "A southern right whale and her calf seen from above"
         },
         {
           "name": "Sound experience for Meraki",
-          "text": "Designed for Meraki at Bioferia, together with Lula Gil."
+          "text": "Designed for Meraki at Bioferia, together with Lula Gil.",
+          "photo": "meraki-bioferia",
+          "photoAlt": "A group of people sitting on the grass in front of the Meraki stand"
         }
       ]
     },
     {
       "intro": "We create to expand the ways we feel, imagine and inhabit the ocean.",
-      "photoAlt": "A hand holding the card of the Habitar las Algas coexistence residency in front of a group of people",
       "items": [
         {
           "name": "Habitar las Algas",
-          "text": "Co-creation of the 2025–2026 Coexistence Residency."
+          "text": "Co-creation of the 2025–2026 Coexistence Residency.",
+          "photo": "habitar-las-algas",
+          "photoAlt": "A hand holding the card of the Habitar las Algas coexistence residency"
         },
         {
           "name": "La Danza del Mar",
-          "text": "Giving science a body and dance a purpose. Presented at the Jornadas de Arte, Ciencia e Investigación, April 2026."
+          "text": "Giving science a body and dance a purpose. Presented at the Jornadas de Arte, Ciencia e Investigación, April 2026.",
+          "photo": "danza-del-mar",
+          "photoAlt": "A red cloth underwater among fish and rocks"
         },
         {
           "name": "Field guide to exploring the sea",
-          "text": "Scientific content and audiovisual material for the Albatros guide."
+          "text": "Scientific content and audiovisual material for the Albatros guide.",
+          "photo": "guia-de-campo",
+          "photoAlt": "An underwater seaweed forest"
         }
       ]
     },
     {
       "intro": "We research and create from our encounter with the sea, exploring it as a living territory of memory, biodiversity and transformation.",
-      "photoAlt": "A film crew with an underwater camera next to a woman on the shore",
       "items": [
         {
           "name": "Ojos al mar",
-          "text": "A feature documentary by Primavera Films, opening film of the Patagonia Eco Film Fest 2024. We took part as co-producers and with underwater footage."
+          "text": "A feature documentary by Primavera Films, opening film of the Patagonia Eco Film Fest 2024. We took part as co-producers and with underwater footage.",
+          "photo": "ojos-al-mar",
+          "photoAlt": "A film crew with an underwater camera next to a woman on the shore"
         },
         {
           "name": "Océano de historias",
-          "text": "Content for the children's book, website and digital support."
+          "text": "Content for the children's book, website and digital support.",
+          "photo": "oceano-de-historias",
+          "photoAlt": "Illustration of a girl swimming next to a whale"
         },
         {
           "name": "Screening and conversation",
-          "text": "Gatherings around the short film Anawa."
+          "text": "Gatherings around the short film Anawa.",
+          "photo": "proyeccion-anawa",
+          "photoAlt": "A woman talking with a group, with a projector in the foreground"
         }
       ]
     }

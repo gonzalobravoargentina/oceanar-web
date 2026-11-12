@@ -12,8 +12,7 @@ type Props = {
   closeLabel: string;
   section: {
     intro: string;
-    photoAlt: string;
-    items: { name: string; text: string }[];
+    items: { name: string; text: string; photo: string; photoAlt: string }[];
   };
 };
 
@@ -99,15 +98,7 @@ export function HeadlinePanel({
         inert={!open}
         className="bg-ocean-deep/85 absolute inset-0 z-10 translate-x-full overflow-y-auto backdrop-blur-md transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] data-[open=true]:translate-x-0 motion-reduce:transition-none"
       >
-        <div className="mx-auto grid max-w-6xl gap-8 px-8 pt-12 pb-32 sm:px-12 sm:pt-16 lg:grid-cols-[5fr_6fr] lg:items-center lg:gap-14 lg:pb-16">
-          <Image
-            src={`/images/home/${clip}.jpg`}
-            alt={section.photoAlt}
-            width={960}
-            height={960}
-            sizes="(min-width: 1024px) 40vw, 100vw"
-            className="aspect-[4/3] w-full object-cover lg:aspect-square lg:max-h-[70svh]"
-          />
+        <div className="mx-auto grid max-w-6xl gap-8 px-8 pt-12 pb-32 sm:px-12 sm:pt-16 lg:grid-cols-[4fr_7fr] lg:items-center lg:gap-14 lg:pb-16">
           <div className="flex flex-col gap-6">
             <h3
               id={titleId}
@@ -116,17 +107,30 @@ export function HeadlinePanel({
               {headline}
             </h3>
             <p className="text-lg opacity-90">{section.intro}</p>
-            <ul className="flex flex-col gap-5">
-              {section.items.map((item) => (
-                <li key={item.name} className="border-t border-white/25 pt-4">
+          </div>
+          <ul className="flex flex-col gap-5">
+            {section.items.map((item) => (
+              <li
+                key={item.name}
+                className="grid grid-cols-[5.5rem_1fr] items-start gap-4 border-t border-white/25 pt-5 sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-6 lg:grid-cols-[11rem_1fr]"
+              >
+                <Image
+                  src={`/images/home/${item.photo}.jpg`}
+                  alt={item.photoAlt}
+                  width={720}
+                  height={720}
+                  sizes="(min-width: 1024px) 176px, (min-width: 640px) 128px, 104px"
+                  className="aspect-square w-full object-cover"
+                />
+                <div>
                   <p className="font-heading text-sm tracking-[0.2em] uppercase">
                     {item.name}
                   </p>
                   <p className="mt-1 opacity-80">{item.text}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
