@@ -40,7 +40,76 @@
   ],
   "panel": {
     "open": "Ver más",
-    "close": "Cerrar",
-    "placeholder": "Acá va el contenido de esta sección."
-  }
+    "close": "Cerrar"
+  },
+  "sections": [
+    {
+      "intro": "Fusionamos arte, tecnología y encuentro para generar experiencias inmersivas que nos conecten sensiblemente con el océano.",
+      "photoAlt": "Cámara 360° dentro de una esfera de vidrio, bajo el agua",
+      "items": [
+        {
+          "name": "Anawa",
+          "text": "Cortometraje subacuático de la Patagonia argentina."
+        },
+        {
+          "name": "Audiovisuales inmersivos 360°",
+          "text": "Videos filmados bajo el agua para sentir el océano desde adentro."
+        },
+        {
+          "name": "Sala de experiencias inmersivas",
+          "text": "Diseñada para Punta Ballena Avistajes."
+        }
+      ]
+    },
+    {
+      "intro": "Escuchar el canto que nace en las profundidades del océano nos recuerda el valor de vivir en un ambiente sano.",
+      "photoAlt": "Ballena franca y su cría vistas desde el aire, en aguas turquesa",
+      "items": [
+        {
+          "name": "Sonidos del mar",
+          "text": "Experiencia sonora oceánica con vocalizaciones de cetáceos grabadas con hidrófono en el Golfo Nuevo, Península Valdés."
+        },
+        {
+          "name": "Experiencia sonora para Meraki",
+          "text": "Diseñada para Meraki en Bioferia, junto a Lula Gil."
+        }
+      ]
+    },
+    {
+      "intro": "Creamos para expandir las maneras de sentir, imaginar y habitar el océano.",
+      "photoAlt": "Tarjeta de la Residencia de Coexistencia Habitar las Algas sostenida en una mano, frente a un grupo de personas",
+      "items": [
+        {
+          "name": "Habitar las Algas",
+          "text": "Co-creación de la Residencia de Coexistencia 2025–2026."
+        },
+        {
+          "name": "La Danza del Mar",
+          "text": "Devolverle a la ciencia un cuerpo y a la danza un propósito. Presentada en las Jornadas de Arte, Ciencia e Investigación, abril de 2026."
+        },
+        {
+          "name": "Guía de campo para explorar el mar",
+          "text": "Contenido científico y material audiovisual para la guía de Albatros."
+        }
+      ]
+    },
+    {
+      "intro": "Investigamos y creamos desde el encuentro con el mar, explorándolo como territorio vivo de memoria, biodiversidad y transformación.",
+      "photoAlt": "Equipo de filmación con cámara subacuática junto a una mujer, en la costa",
+      "items": [
+        {
+          "name": "Ojos al mar",
+          "text": "Largometraje documental de Primavera Films, película de apertura del Patagonia Eco Film Fest 2024. Participamos como coproductores y con imágenes subacuáticas."
+        },
+        {
+          "name": "Océano de historias",
+          "text": "Contenido del libro infantil, web y apoyo digital."
+        },
+        {
+          "name": "Proyección y conversación",
+          "text": "Encuentros alrededor del cortometraje Anawa."
+        }
+      ]
+    }
+  ]
 }
