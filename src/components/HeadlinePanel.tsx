@@ -12,7 +12,14 @@ type Props = {
   closeLabel: string;
   section: {
     intro: string;
-    items: { name: string; text: string; photo: string; photoAlt: string }[];
+    items: {
+      name: string;
+      text: string;
+      photo: string;
+      photoAlt: string;
+      url?: string;
+      linkLabel?: string;
+    }[];
   };
 };
 
@@ -127,6 +134,17 @@ export function HeadlinePanel({
                     {item.name}
                   </p>
                   <p className="mt-1 opacity-80">{item.text}</p>
+                  {item.url && (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${item.linkLabel}: ${item.name}`}
+                      className="font-heading mt-3 inline-block text-xs tracking-[0.2em] uppercase underline underline-offset-4 opacity-90 transition-opacity hover:opacity-100"
+                    >
+                      {item.linkLabel} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
                 </div>
               </li>
             ))}

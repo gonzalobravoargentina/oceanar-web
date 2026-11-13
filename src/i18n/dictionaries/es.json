@@ -50,7 +50,9 @@
           "name": "Anawa",
           "text": "Cortometraje subacuático de la Patagonia argentina.",
           "photo": "anawa",
-          "photoAlt": "Bailarina bajo el agua con una falda roja, en posición invertida"
+          "photoAlt": "Bailarina bajo el agua con una falda roja, en posición invertida",
+          "url": "https://www.youtube.com/watch?v=qpimlkV6Pqg",
+          "linkLabel": "Ver el cortometraje"
         },
         {
           "name": "Audiovisuales inmersivos 360°",
@@ -100,9 +102,11 @@
         },
         {
           "name": "Guía de campo para explorar el mar",
-          "text": "Contenido científico y material audiovisual para la guía de Albatros.",
+          "text": "Guía de Editorial Albatros para que niñas y niños conozcan los ambientes y seres vivos del mar, con códigos QR con sonidos y actividades. Participamos con contenido científico y material audiovisual.",
           "photo": "guia-de-campo",
-          "photoAlt": "Bosque de algas visto bajo el agua"
+          "photoAlt": "Bosque de algas visto bajo el agua",
+          "url": "https://albatros.com.ar/productos/guia-de-campo-para-explorar-el-mar/",
+          "linkLabel": "Ver la guía"
         }
       ]
     },
@@ -113,13 +117,17 @@
           "name": "Ojos al mar",
           "text": "Largometraje documental de Primavera Films, película de apertura del Patagonia Eco Film Fest 2024. Participamos como coproductores y con imágenes subacuáticas.",
           "photo": "ojos-al-mar",
-          "photoAlt": "Equipo de filmación con cámara subacuática junto a una mujer, en la costa"
+          "photoAlt": "Equipo de filmación con cámara subacuática junto a una mujer, en la costa",
+          "url": "https://www.youtube.com/watch?v=5nB2eAqAlwM",
+          "linkLabel": "Ver el tráiler"
         },
         {
-          "name": "Océano de historias",
-          "text": "Contenido del libro infantil, web y apoyo digital.",
+          "name": "Matilde y Armonía",
+          "text": "Novela infantil sobre la amistad entre Matilde y Armonía, una ballena franca. Cada capítulo tiene un código QR que lleva a una web con actividades; participamos en el apoyo digital del libro.",
           "photo": "oceano-de-historias",
-          "photoAlt": "Ilustración de una niña nadando junto a una ballena"
+          "photoAlt": "Ilustración de una niña nadando junto a una ballena",
+          "url": "https://www.oceanodehistorias.com/",
+          "linkLabel": "Visitar el sitio"
         },
         {
           "name": "Proyección y conversación",

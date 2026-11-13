@@ -37,7 +37,9 @@
           "name": "Anawa",
           "text": "An underwater short film from Argentine Patagonia.",
           "photo": "anawa",
-          "photoAlt": "A dancer underwater in a red skirt, upside down"
+          "photoAlt": "A dancer underwater in a red skirt, upside down",
+          "url": "https://www.youtube.com/watch?v=qpimlkV6Pqg",
+          "linkLabel": "Watch the short film"
         },
         {
           "name": "360° immersive audiovisuals",
@@ -87,9 +89,11 @@
         },
         {
           "name": "Field guide to exploring the sea",
-          "text": "Scientific content and audiovisual material for the Albatros guide.",
+          "text": "A guide by Editorial Albatros for children to discover the sea's environments and living things, with QR codes for ocean sounds and activities. We contributed scientific content and audiovisual material.",
           "photo": "guia-de-campo",
-          "photoAlt": "An underwater seaweed forest"
+          "photoAlt": "An underwater seaweed forest",
+          "url": "https://albatros.com.ar/productos/guia-de-campo-para-explorar-el-mar/",
+          "linkLabel": "See the guide"
         }
       ]
     },
@@ -100,13 +104,17 @@
           "name": "Ojos al mar",
           "text": "A feature documentary by Primavera Films, opening film of the Patagonia Eco Film Fest 2024. We took part as co-producers and with underwater footage.",
           "photo": "ojos-al-mar",
-          "photoAlt": "A film crew with an underwater camera next to a woman on the shore"
+          "photoAlt": "A film crew with an underwater camera next to a woman on the shore",
+          "url": "https://www.youtube.com/watch?v=5nB2eAqAlwM",
+          "linkLabel": "Watch the trailer"
         },
         {
-          "name": "Océano de historias",
-          "text": "Content for the children's book, website and digital support.",
+          "name": "Matilde & Armonía",
+          "text": "A children's novel about the friendship between Matilde and Armonía, a young southern right whale. Each chapter has a QR code that leads to a website with activities; we took part in the book's digital support.",
           "photo": "oceano-de-historias",
-          "photoAlt": "Illustration of a girl swimming next to a whale"
+          "photoAlt": "Illustration of a girl swimming next to a whale",
+          "url": "https://www.oceanodehistorias.com/",
+          "linkLabel": "Visit the site"
         },
         {
           "name": "Screening and conversation",
