@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { retryPlayOnTouch } from "@/lib/retryPlayOnTouch";
+import { videoUrl } from "@/lib/videoUrl";
 import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
 
 // Second of the hero clip at which the sea lion has moved the kelp. The
@@ -76,13 +77,13 @@ export function Hero({
       <link
         rel="preload"
         as="image"
-        href={`${base}-poster.jpg`}
+        href={videoUrl(`${base}-poster.jpg`)}
         fetchPriority="high"
       />
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: `url(${base}-poster.jpg)` }}
+        style={{ backgroundImage: `url(${videoUrl(`${base}-poster.jpg`)})` }}
       >
         {!reduced && (
           <video
@@ -92,7 +93,7 @@ export function Hero({
             loop
             playsInline
             preload="auto"
-            poster={`${base}-poster.jpg`}
+            poster={videoUrl(`${base}-poster.jpg`)}
             className="h-full w-full object-cover"
             onTimeUpdate={(e) => {
               if (e.currentTarget.currentTime >= REVEAL_AT_SECONDS)
@@ -101,9 +102,9 @@ export function Hero({
             onError={() => setVideoFailed(true)}
           >
             {/* MP4 (H.264) first: every phone plays it, with hardware decoding. */}
-            <source src={`${base}.mp4`} type="video/mp4" />
+            <source src={videoUrl(`${base}.mp4`)} type="video/mp4" />
             <source
-              src={`${base}.webm`}
+              src={videoUrl(`${base}.webm`)}
               type="video/webm"
               onError={() => setVideoFailed(true)}
             />
