@@ -47,7 +47,9 @@
           "text": "Videos filmed underwater to feel the ocean from the inside.",
           "photo": "audiovisuales-360",
           "photoAlt": "A 360° camera inside a glass sphere, underwater",
-          "photoShape": "square"
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=gZFXi5NtE6M&list=PLOabOqBdimw4UEZKR3wig6O9Lh0uL6u7h",
+          "linkLabel": "Watch the 360 videos"
         },
         {
           "name": "Immersive experience room",

@@ -60,7 +60,9 @@
           "text": "Videos filmados bajo el agua para sentir el océano desde adentro.",
           "photo": "audiovisuales-360",
           "photoAlt": "Cámara 360° dentro de una esfera de vidrio, bajo el agua",
-          "photoShape": "square"
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=gZFXi5NtE6M&list=PLOabOqBdimw4UEZKR3wig6O9Lh0uL6u7h",
+          "linkLabel": "Ver los videos 360"
         },
         {
           "name": "Sala de experiencias inmersivas",
