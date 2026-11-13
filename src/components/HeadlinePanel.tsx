@@ -4,6 +4,13 @@ import Image from "next/image";
 import { useId, useState } from "react";
 import { LoopVideo } from "@/components/LoopVideo";
 
+// The photos are 720 px wide; the shape tells how tall each one is.
+const PHOTO_SHAPES: Record<string, { height: number; aspect: string }> = {
+  square: { height: 720, aspect: "aspect-square" },
+  book: { height: 864, aspect: "aspect-[5/6]" },
+  poster: { height: 1008, aspect: "aspect-[5/7]" },
+};
+
 type Props = {
   index: number;
   headline: string;
@@ -124,17 +131,16 @@ export function HeadlinePanel({
               >
                 {/* The photo opens the same link as the text link below it. */}
                 {(() => {
-                  const poster = item.photoShape === "poster";
+                  const shape =
+                    PHOTO_SHAPES[item.photoShape] ?? PHOTO_SHAPES.square;
                   const photo = (
                     <Image
                       src={`/images/home/${item.photo}.jpg`}
                       alt={item.photoAlt}
                       width={720}
-                      height={poster ? 1008 : 720}
+                      height={shape.height}
                       sizes="(min-width: 1024px) 144px, (min-width: 640px) 128px, 88px"
-                      className={`w-full object-cover ${
-                        poster ? "aspect-[5/7]" : "aspect-square"
-                      }`}
+                      className={`w-full object-cover ${shape.aspect}`}
                     />
                   );
                   return item.url ? (
