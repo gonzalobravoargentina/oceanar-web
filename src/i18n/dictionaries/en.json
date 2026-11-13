@@ -27,7 +27,119 @@
   ],
   "panel": {
     "open": "See more",
-    "close": "Close",
-    "placeholder": "The content for this section goes here."
-  }
+    "close": "Close"
+  },
+  "sections": [
+    {
+      "intro": "We blend art, technology and encounter to create immersive experiences that connect us sensitively with the ocean.",
+      "items": [
+        {
+          "name": "Anawa",
+          "text": "An underwater short film from Argentine Patagonia.",
+          "photo": "anawa",
+          "photoAlt": "Poster of the short film Anawa: a dancer underwater",
+          "url": "https://www.youtube.com/watch?v=qpimlkV6Pqg",
+          "linkLabel": "Watch the short film",
+          "photoShape": "square"
+        },
+        {
+          "name": "360° immersive audiovisuals",
+          "text": "Videos filmed underwater to feel the ocean from the inside.",
+          "photo": "audiovisuales-360",
+          "photoAlt": "A 360° camera inside a glass sphere, underwater",
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=gZFXi5NtE6M&list=PLOabOqBdimw4UEZKR3wig6O9Lh0uL6u7h",
+          "linkLabel": "Watch the 360 videos"
+        },
+        {
+          "name": "Immersive experience room",
+          "text": "Designed for Punta Ballena Avistajes.",
+          "photo": "sala-inmersiva",
+          "photoAlt": "Three people sitting in a room with blue light and speakers",
+          "photoShape": "square"
+        }
+      ]
+    },
+    {
+      "intro": "Listening to the song born in the depths of the ocean reminds us how much it matters to live in a healthy environment.",
+      "items": [
+        {
+          "name": "Sonidos del mar",
+          "text": "An ocean sound experience built from cetacean vocalizations recorded with a hydrophone in Golfo Nuevo, Península Valdés.",
+          "photo": "sonidos-del-mar",
+          "photoAlt": "A southern right whale and her calf seen from above",
+          "photoShape": "square"
+        },
+        {
+          "name": "Sound experience for Meraki",
+          "text": "Designed for Meraki at Bioferia, together with Lula Gil.",
+          "photo": "meraki-bioferia",
+          "photoAlt": "A group of people sitting on the grass in front of the Meraki stand",
+          "photoShape": "square"
+        }
+      ]
+    },
+    {
+      "intro": "We create to expand the ways we feel, imagine and inhabit the ocean.",
+      "items": [
+        {
+          "name": "Habitar las Algas",
+          "text": "Co-creation of the 2025–2026 Coexistence Residency.",
+          "photo": "habitar-las-algas",
+          "photoAlt": "A hand holding the card of the Habitar las Algas coexistence residency",
+          "photoShape": "square",
+          "url": "https://www.habitaralgas.com/",
+          "linkLabel": "Visit the site"
+        },
+        {
+          "name": "La Danza del Mar",
+          "text": "Giving science a body and dance a purpose. Presented at the Jornadas de Arte, Ciencia e Investigación, April 2026.",
+          "photo": "danza-del-mar",
+          "photoAlt": "A red cloth underwater among fish and rocks",
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=13VLp3Qhi9E&t=122s",
+          "linkLabel": "Watch the talk"
+        },
+        {
+          "name": "Field guide to exploring the sea",
+          "text": "A guide by Editorial Albatros for children to discover the sea's environments and living things, with QR codes for ocean sounds and activities. We contributed scientific content and audiovisual material.",
+          "photo": "guia-de-campo",
+          "photoAlt": "Cover of the Guía de campo para explorar el mar, by Editorial Albatros",
+          "url": "https://albatros.com.ar/productos/guia-de-campo-para-explorar-el-mar/",
+          "linkLabel": "See the guide",
+          "photoShape": "poster"
+        }
+      ]
+    },
+    {
+      "intro": "We research and create from our encounter with the sea, exploring it as a living territory of memory, biodiversity and transformation.",
+      "items": [
+        {
+          "name": "Ojos al mar",
+          "text": "A feature documentary by Primavera Films, opening film of the Patagonia Eco Film Fest 2024. We took part as co-producers and with underwater footage.",
+          "photo": "ojos-al-mar",
+          "photoAlt": "Poster of the film Ojos al mar: a person swimming at the surface",
+          "url": "https://www.youtube.com/watch?v=5nB2eAqAlwM",
+          "linkLabel": "Watch the trailer",
+          "photoShape": "poster"
+        },
+        {
+          "name": "Matilde & Armonía",
+          "text": "A children's novel about the friendship between Matilde and Armonía, a young southern right whale. Each chapter has a QR code that leads to a website with activities; we took part in the book's digital support.",
+          "photo": "matilde-y-armonia",
+          "photoAlt": "Cover of the book Una niña... una ballena... un mar",
+          "url": "https://www.oceanodehistorias.com/",
+          "linkLabel": "Visit the site",
+          "photoShape": "book"
+        },
+        {
+          "name": "Screening and conversation",
+          "text": "Gatherings around the short film Anawa.",
+          "photo": "proyeccion-anawa",
+          "photoAlt": "A woman talking with a group, with a projector in the foreground",
+          "photoShape": "square"
+        }
+      ]
+    }
+  ]
 }

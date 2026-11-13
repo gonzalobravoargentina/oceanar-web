@@ -40,7 +40,119 @@
   ],
   "panel": {
     "open": "Ver más",
-    "close": "Cerrar",
-    "placeholder": "Acá va el contenido de esta sección."
-  }
+    "close": "Cerrar"
+  },
+  "sections": [
+    {
+      "intro": "Fusionamos arte, tecnología y encuentro para generar experiencias inmersivas que nos conecten sensiblemente con el océano.",
+      "items": [
+        {
+          "name": "Anawa",
+          "text": "Cortometraje subacuático de la Patagonia argentina.",
+          "photo": "anawa",
+          "photoAlt": "Póster del cortometraje Anawa: una bailarina bajo el agua",
+          "url": "https://www.youtube.com/watch?v=qpimlkV6Pqg",
+          "linkLabel": "Ver el cortometraje",
+          "photoShape": "square"
+        },
+        {
+          "name": "Audiovisuales inmersivos 360°",
+          "text": "Videos filmados bajo el agua para sentir el océano desde adentro.",
+          "photo": "audiovisuales-360",
+          "photoAlt": "Cámara 360° dentro de una esfera de vidrio, bajo el agua",
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=gZFXi5NtE6M&list=PLOabOqBdimw4UEZKR3wig6O9Lh0uL6u7h",
+          "linkLabel": "Ver los videos 360"
+        },
+        {
+          "name": "Sala de experiencias inmersivas",
+          "text": "Diseñada para Punta Ballena Avistajes.",
+          "photo": "sala-inmersiva",
+          "photoAlt": "Tres personas sentadas en una sala con luz azul y parlantes",
+          "photoShape": "square"
+        }
+      ]
+    },
+    {
+      "intro": "Escuchar el canto que nace en las profundidades del océano nos recuerda el valor de vivir en un ambiente sano.",
+      "items": [
+        {
+          "name": "Sonidos del mar",
+          "text": "Experiencia sonora oceánica con vocalizaciones de cetáceos grabadas con hidrófono en el Golfo Nuevo, Península Valdés.",
+          "photo": "sonidos-del-mar",
+          "photoAlt": "Ballena franca y su cría vistas desde el aire",
+          "photoShape": "square"
+        },
+        {
+          "name": "Experiencia sonora para Meraki",
+          "text": "Diseñada para Meraki en Bioferia, junto a Lula Gil.",
+          "photo": "meraki-bioferia",
+          "photoAlt": "Grupo de personas sentadas en el pasto frente al stand de Meraki",
+          "photoShape": "square"
+        }
+      ]
+    },
+    {
+      "intro": "Creamos para expandir las maneras de sentir, imaginar y habitar el océano.",
+      "items": [
+        {
+          "name": "Habitar las Algas",
+          "text": "Co-creación de la Residencia de Coexistencia 2025–2026.",
+          "photo": "habitar-las-algas",
+          "photoAlt": "Tarjeta de la Residencia de Coexistencia Habitar las Algas sostenida en una mano",
+          "photoShape": "square",
+          "url": "https://www.habitaralgas.com/",
+          "linkLabel": "Visitar el sitio"
+        },
+        {
+          "name": "La Danza del Mar",
+          "text": "Devolverle a la ciencia un cuerpo y a la danza un propósito. Presentada en las Jornadas de Arte, Ciencia e Investigación, abril de 2026.",
+          "photo": "danza-del-mar",
+          "photoAlt": "Tela roja bajo el agua, entre peces y rocas",
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=13VLp3Qhi9E&t=122s",
+          "linkLabel": "Ver la charla"
+        },
+        {
+          "name": "Guía de campo para explorar el mar",
+          "text": "Guía de Editorial Albatros para que niñas y niños conozcan los ambientes y seres vivos del mar, con códigos QR con sonidos y actividades. Participamos con contenido científico y material audiovisual.",
+          "photo": "guia-de-campo",
+          "photoAlt": "Tapa de la Guía de campo para explorar el mar, de Editorial Albatros",
+          "url": "https://albatros.com.ar/productos/guia-de-campo-para-explorar-el-mar/",
+          "linkLabel": "Ver la guía",
+          "photoShape": "poster"
+        }
+      ]
+    },
+    {
+      "intro": "Investigamos y creamos desde el encuentro con el mar, explorándolo como territorio vivo de memoria, biodiversidad y transformación.",
+      "items": [
+        {
+          "name": "Ojos al mar",
+          "text": "Largometraje documental de Primavera Films, película de apertura del Patagonia Eco Film Fest 2024. Participamos como coproductores y con imágenes subacuáticas.",
+          "photo": "ojos-al-mar",
+          "photoAlt": "Póster de la película Ojos al mar: una persona nadando en la superficie",
+          "url": "https://www.youtube.com/watch?v=5nB2eAqAlwM",
+          "linkLabel": "Ver el tráiler",
+          "photoShape": "poster"
+        },
+        {
+          "name": "Matilde y Armonía",
+          "text": "Novela infantil sobre la amistad entre Matilde y Armonía, una ballena franca. Cada capítulo tiene un código QR que lleva a una web con actividades; participamos en el apoyo digital del libro.",
+          "photo": "matilde-y-armonia",
+          "photoAlt": "Tapa del libro Una niña... una ballena... un mar",
+          "url": "https://www.oceanodehistorias.com/",
+          "linkLabel": "Visitar el sitio",
+          "photoShape": "book"
+        },
+        {
+          "name": "Proyección y conversación",
+          "text": "Encuentros alrededor del cortometraje Anawa.",
+          "photo": "proyeccion-anawa",
+          "photoAlt": "Una mujer conversa con un grupo, con un proyector en primer plano",
+          "photoShape": "square"
+        }
+      ]
+    }
+  ]
 }

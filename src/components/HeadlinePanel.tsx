@@ -1,7 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useId, useState } from "react";
 import { LoopVideo } from "@/components/LoopVideo";
+
+// The photos are 720 px wide; the shape tells how tall each one is.
+const PHOTO_SHAPES: Record<string, { height: number; aspect: string }> = {
+  square: { height: 720, aspect: "aspect-square" },
+  book: { height: 864, aspect: "aspect-[5/6]" },
+  poster: { height: 1008, aspect: "aspect-[5/7]" },
+};
 
 type Props = {
   index: number;
@@ -9,7 +17,18 @@ type Props = {
   clip: string;
   openLabel: string;
   closeLabel: string;
-  placeholder: string;
+  section: {
+    intro: string;
+    items: {
+      name: string;
+      text: string;
+      photo: string;
+      photoAlt: string;
+      photoShape: string;
+      url?: string;
+      linkLabel?: string;
+    }[];
+  };
 };
 
 export function HeadlinePanel({
@@ -18,7 +37,7 @@ export function HeadlinePanel({
   clip,
   openLabel,
   closeLabel,
-  placeholder,
+  section,
 }: Props) {
   const [open, setOpen] = useState(false);
   const windowId = useId();
@@ -94,14 +113,70 @@ export function HeadlinePanel({
         inert={!open}
         className="bg-ocean-deep/85 absolute inset-0 z-10 translate-x-full overflow-y-auto backdrop-blur-md transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] data-[open=true]:translate-x-0 motion-reduce:transition-none"
       >
-        <div className="flex flex-col gap-6 px-8 pt-12 pb-32 sm:px-12 sm:pt-16">
-          <h3
-            id={titleId}
-            className="font-display text-3xl leading-tight font-black sm:text-4xl"
-          >
-            {headline}
-          </h3>
-          <p className="text-lg opacity-80">{placeholder}</p>
+        <div className="mx-auto grid max-w-6xl gap-8 px-8 pt-12 pb-32 sm:px-12 sm:pt-16 lg:grid-cols-[4fr_7fr] lg:items-center lg:gap-14 lg:py-10">
+          <div className="flex flex-col gap-6">
+            <h3
+              id={titleId}
+              className="font-display text-3xl leading-tight font-black sm:text-4xl"
+            >
+              {headline}
+            </h3>
+            <p className="text-lg opacity-90">{section.intro}</p>
+          </div>
+          <ul className="flex flex-col gap-5">
+            {section.items.map((item) => (
+              <li
+                key={item.name}
+                className="grid grid-cols-[5.5rem_1fr] items-start gap-4 border-t border-white/25 pt-5 sm:grid-cols-[8rem_1fr] sm:items-center sm:gap-6 lg:grid-cols-[9rem_1fr]"
+              >
+                {/* The photo opens the same link as the text link below it. */}
+                {(() => {
+                  const shape =
+                    PHOTO_SHAPES[item.photoShape] ?? PHOTO_SHAPES.square;
+                  const photo = (
+                    <Image
+                      src={`/images/home/${item.photo}.jpg`}
+                      alt={item.photoAlt}
+                      width={720}
+                      height={shape.height}
+                      sizes="(min-width: 1024px) 144px, (min-width: 640px) 128px, 88px"
+                      className={`w-full object-cover ${shape.aspect}`}
+                    />
+                  );
+                  return item.url ? (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      tabIndex={-1}
+                      className="block transition-opacity hover:opacity-85"
+                    >
+                      {photo}
+                    </a>
+                  ) : (
+                    photo
+                  );
+                })()}
+                <div>
+                  <p className="font-heading text-sm tracking-[0.2em] uppercase">
+                    {item.name}
+                  </p>
+                  <p className="mt-1 opacity-80">{item.text}</p>
+                  {item.url && (
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${item.linkLabel}: ${item.name}`}
+                      className="font-heading mt-3 inline-block text-xs tracking-[0.2em] uppercase underline underline-offset-4 opacity-90 transition-opacity hover:opacity-100"
+                    >
+                      {item.linkLabel} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

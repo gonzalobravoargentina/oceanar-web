@@ -100,7 +100,7 @@ export default async function Page({ params }: PageProps<"/[lang]">) {
           clip={headlineClips[i]}
           openLabel={dict.panel.open}
           closeLabel={dict.panel.close}
-          placeholder={dict.panel.placeholder}
+          section={dict.sections[i]}
         />
       ))}
     </main>
