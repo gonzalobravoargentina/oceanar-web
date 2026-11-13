@@ -13,19 +13,22 @@ type Props = {
 const cssVars = (vars: Record<string, string | number>) =>
   vars as unknown as CSSProperties;
 
-// A horizontal sine-like wave from x0 to x1 (smooth quadratic curves).
-function wavePath(x0: number, x1: number, y: number, amp: number, wl: number) {
-  let d = `M${x0},${y} Q${x0 + wl / 4},${y - amp} ${x0 + wl / 2},${y}`;
-  for (let x = x0 + wl / 2; x < x1; x += wl / 2) {
-    d += ` T${x + wl / 2},${y}`;
-  }
-  return d;
+// Parts 2 and 3 are "la cultura oceánica" / "ocean culture": the emphasis.
+const isAccent = (i: number) => i === 2 || i === 3;
+
+// Groups the parts that must stay on one line: "la cultura oceánica" is
+// parts 2 and 3 together.
+function groupParts(parts: string[]) {
+  const groups: number[][] = [];
+  parts.forEach((_, i) => {
+    if (i > 0 && isAccent(i) && isAccent(i - 1)) {
+      groups[groups.length - 1].push(i);
+    } else {
+      groups.push([i]);
+    }
+  });
+  return groups;
 }
-
-const underlinePath = wavePath(0, 400, 20, 9, 100);
-
-// Index of the big accent word, the one that gets the wave underline.
-const ACCENT_PART = 3;
 
 export function ActionText({ text, parts }: Props) {
   const ref = useRef<HTMLElement>(null);
@@ -37,39 +40,46 @@ export function ActionText({ text, parts }: Props) {
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.35 },
+      { threshold: 0.4 },
     );
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="accion" ref={ref} className="act-section scroll-mt-8">
+    <section
+      id="accion"
+      ref={ref}
+      data-in={inView}
+      className="act-section scroll-mt-8"
+    >
       <p className="sr-only">{text}</p>
 
-      <div data-in={inView} aria-hidden="true" className="act-root">
-        <div className="act">
-          {parts.map((part, i) => (
-            <span key={i} className="line" style={cssVars({ "--i": i })}>
-              <span className={`w w${i}`}>
-                {part}
-                {i === ACCENT_PART && (
-                  <svg
-                    className="stroke-under wipe"
-                    viewBox="0 0 400 40"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      d={underlinePath}
-                      stroke="currentColor"
-                      strokeWidth="7"
-                    />
-                  </svg>
-                )}
+      <div aria-hidden="true" className="act-inner">
+        <span className="act-vline act-vline-top" />
+        <p className="act-name">{parts[0]}</p>
+        <p className="act-text">
+          {groupParts(parts)
+            .slice(1)
+            .map((group) => (
+              <span key={group[0]}>
+                <span className="act-group">
+                  {group.map((i, k) => (
+                    <span key={i}>
+                      {k > 0 && " "}
+                      <span
+                        className={`act-fade ${isAccent(i) ? "act-accent" : ""}`}
+                        style={cssVars({ "--i": i - 1 })}
+                      >
+                        {parts[i]}
+                      </span>
+                    </span>
+                  ))}
+                </span>{" "}
               </span>
-            </span>
-          ))}
-        </div>
+            ))}
+        </p>
+        <span className="act-vline act-vline-bottom" />
       </div>
     </section>
   );
