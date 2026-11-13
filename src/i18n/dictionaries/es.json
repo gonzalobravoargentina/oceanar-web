@@ -107,7 +107,9 @@
           "text": "Devolverle a la ciencia un cuerpo y a la danza un propósito. Presentada en las Jornadas de Arte, Ciencia e Investigación, abril de 2026.",
           "photo": "danza-del-mar",
           "photoAlt": "Tela roja bajo el agua, entre peces y rocas",
-          "photoShape": "square"
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=13VLp3Qhi9E&t=122s",
+          "linkLabel": "Ver la charla"
         },
         {
           "name": "Guía de campo para explorar el mar",

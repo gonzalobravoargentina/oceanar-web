@@ -94,7 +94,9 @@
           "text": "Giving science a body and dance a purpose. Presented at the Jornadas de Arte, Ciencia e Investigación, April 2026.",
           "photo": "danza-del-mar",
           "photoAlt": "A red cloth underwater among fish and rocks",
-          "photoShape": "square"
+          "photoShape": "square",
+          "url": "https://www.youtube.com/watch?v=13VLp3Qhi9E&t=122s",
+          "linkLabel": "Watch the talk"
         },
         {
           "name": "Field guide to exploring the sea",
